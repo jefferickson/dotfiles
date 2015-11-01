@@ -1,13 +1,8 @@
-// Settings in here override those in "Default/Preferences.sublime-settings", and
-// are overridden in turn by file type specific settings.
 {
-    // The number of spaces a tab is considered equal to
-    "tab_size": 4,
-
-    // Set to true to insert spaces when tab is pressed
-    "translate_tabs_to_spaces": true,
-
-    // List any packages to ignore here. When removing entries from this list,
-    // a restart may be required if the package contains plugins.
-    "ignored_packages": []
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+	],
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

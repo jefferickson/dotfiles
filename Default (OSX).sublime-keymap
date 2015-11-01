@@ -1,0 +1,15 @@
+[
+
+{ "keys": ["super+`"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
+        ]
+},
+
+{ "keys": ["super+enter"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
+        ]
+}
+
+]
