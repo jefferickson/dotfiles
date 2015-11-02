@@ -1,15 +1,17 @@
 [
 
-{ "keys": ["super+`"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
-        ]
-},
+	// add key for Python + SublimeREPL
+	{ "keys": ["super+`"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
+	        [
+	            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
+	        ]
+	},
 
-{ "keys": ["super+enter"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
-        ]
-}
+	// add key for Python + SublimeREPL
+	{ "keys": ["super+enter"], "command": "repl_transfer_current", "args": {"scope": "lines"}, "context":
+	        [
+	            { "key": "selector", "operator": "equal", "operand": "source.python", "match_all": true }
+	        ]
+	}
 
 ]
