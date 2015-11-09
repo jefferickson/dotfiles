@@ -53,7 +53,7 @@ plugins=(sublime sudo)
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/Users/jerickson/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:/opt/local/bin:/opt/local/sbin:/Users/jerickson/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
