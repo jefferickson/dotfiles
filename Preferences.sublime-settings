@@ -9,9 +9,11 @@
 	
 	"trim_trailing_white_space_on_save": true
 
-	//Packages to install:
-	//-Package Control
-	//-GitGutter
-	//-SublimeLinter
-	//-SublimeREPL
+	// Packages to install:
+	// -Package Control
+	// -Git
+	// -GitGutter
+	// -SublimeLinter
+	// -SublimeREPL
+	// -Markdown Preview
 }
