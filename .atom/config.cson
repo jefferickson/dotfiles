@@ -9,10 +9,15 @@
     fontSize: 12
   "exception-reporting":
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
+  "go-plus":
+    panelDisplayMode: "closed"
   linter: {}
   "linter-flake8":
     maxLineLength: 150
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   welcome:
     showOnStartup: false
