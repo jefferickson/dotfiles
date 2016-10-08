@@ -11,7 +11,8 @@
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
   "go-plus":
     panelDisplayMode: "closed"
-  linter: {}
+  linter:
+    lintOnFly: false
   "linter-flake8":
     maxLineLength: 150
     pep8ErrorsToWarnings: true

@@ -49,11 +49,11 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sublime sudo)
+plugins=(sudo)
 
 # User configuration
 
-export PATH="/usr/local/mysql/bin:/usr/local/scala/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/opt/local/bin:/opt/local/sbin:/Users/jerickson/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/jerickson/bin"
+export PATH="/usr/local/mysql/bin:/usr/local/scala/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/opt/local/bin:/opt/local/sbin:/Users/jerickson/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/jerickson/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
