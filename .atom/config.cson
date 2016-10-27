@@ -4,7 +4,8 @@
       _analyticsUserId: "05e37f05-de88-45d2-adce-16cc3a857b05"
     python:
       max_line_length: 120
-  core: {}
+  core:
+    telemetryConsent: "no"
   editor:
     fontSize: 12
   "exception-reporting":
