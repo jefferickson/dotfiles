@@ -6,7 +6,11 @@
       max_line_length: 120
   "autocomplete-python":
     fuzzyMatcher: false
+    useKite: false
   core:
+    disabledPackages: [
+      "autocomplete-paths"
+    ]
     telemetryConsent: "no"
   editor:
     fontSize: 12
@@ -14,7 +18,10 @@
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
   "go-plus":
     panelDisplayMode: "closed"
+  "jupyter-notebook":
+    jupyterPath: "/Users/jerickson/anaconda/envs/magnus_bokeh11/bin/"
   linter:
+    errorPanelHeight: 113
     lintOnFly: false
   "linter-flake8":
     maxLineLength: 150
