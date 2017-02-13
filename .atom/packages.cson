@@ -10,7 +10,6 @@ packages: [
   "highlight-selected"
   "Hydrogen"
   "hyperclick"
-  "jupyter-notebook"
   "language-scala"
   "linter"
   "linter-flake8"
