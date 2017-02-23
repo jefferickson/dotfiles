@@ -34,5 +34,7 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "tree-view":
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
