@@ -22,11 +22,13 @@
     jupyterPath: "/Users/jerickson/anaconda/envs/magnus_bokeh11/bin/"
   linter:
     errorPanelHeight: 113
+    lintOnChange: false
     lintOnFly: false
   "linter-flake8":
     maxLineLength: 150
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
+  "linter-ui-default": {}
   minimap:
     plugins:
       "highlight-selected": true
