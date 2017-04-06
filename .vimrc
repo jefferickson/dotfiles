@@ -1,7 +1,5 @@
 " Pathogen
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 " vim-slime
 let g:slime_target = "tmux"
@@ -22,3 +20,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " vim-fugitive
 " vim-slime
 " vim-surround
+" vim-sensible
