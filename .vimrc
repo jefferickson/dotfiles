@@ -1,5 +1,6 @@
 " Pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " vim-slime
 let g:slime_target = "tmux"
@@ -14,10 +15,11 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Other modules installed
-" delimitMate
 " nerdtree
 " vim-airline
 " vim-fugitive
 " vim-slime
 " vim-surround
 " vim-sensible
+" vim-commentary
+" python-mode
