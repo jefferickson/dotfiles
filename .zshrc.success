@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 alias avenv="source activate"
 alias dvenv="source deactivate"
 
-alias swe="~/git-repos/swedish-ord/svenskt-ord.sh"
+alias swe="~/svenskt-ord.sh"
 
 # Go path
 export GOPATH=$HOME/gowork
