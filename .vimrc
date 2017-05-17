@@ -20,6 +20,9 @@ map <C-n> :NERDTreeToggle<CR>
 " close vim if only thing open is nerdtree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" vim-flake8
+let g:flake8_show_in_gutter=1
+
 " Other modules installed
 " nerdtree
 " vim-airline
@@ -28,4 +31,4 @@ map <C-n> :NERDTreeToggle<CR>
 " vim-surround
 " vim-sensible
 " vim-commentary
-" python-mode
+" vim-flake8
