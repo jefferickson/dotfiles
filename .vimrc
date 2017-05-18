@@ -22,6 +22,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " vim-flake8
 let g:flake8_show_in_gutter=1
+autocmd BufWritePost *.py call Flake8()
 
 " Other modules installed
 " nerdtree
