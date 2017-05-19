@@ -24,7 +24,11 @@ map <C-n> :NERDTreeToggle<CR>
 let g:flake8_show_in_gutter=1
 autocmd BufWritePost *.py call Flake8()
 
+" jedi-vim
+autocmd FileType python setlocal completeopt-=preview
+
 " Other modules installed
+" jedi-vim
 " nerdtree
 " vim-airline
 " vim-fugitive
