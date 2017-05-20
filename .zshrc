@@ -12,9 +12,11 @@ plugins=(sudo)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/opt/anaconda3/bin:/home/jeff/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin"
 
 source $ZSH/oh-my-zsh.sh
 
-alias avenv="source activate"
-alias dvenv="source deactivate"
+alias swe="~/svenskt-ord.sh"
+
+# go path
+export GOPATH=$HOME/go
