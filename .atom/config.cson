@@ -26,7 +26,8 @@
     maxLineLength: 150
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   minimap:
     disablePythonDocLinks: true
     plugins:
