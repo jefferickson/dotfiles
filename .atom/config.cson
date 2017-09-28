@@ -13,6 +13,7 @@
     ]
     telemetryConsent: "no"
   editor:
+    fontFamily: "Input Mono"
     fontSize: 12
   "exception-reporting":
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
