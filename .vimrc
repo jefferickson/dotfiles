@@ -2,9 +2,22 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+" while learning, disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
 " line numbers
 set number
 set relativenumber
+
+" highlight search
+set hlsearch
 
 " vim-slime
 let g:slime_target = "tmux"
@@ -37,3 +50,5 @@ autocmd FileType python setlocal completeopt-=preview
 " vim-sensible
 " vim-commentary
 " vim-flake8
+" command-T
+" vim-unimpaired
