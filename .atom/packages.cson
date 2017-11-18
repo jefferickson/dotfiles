@@ -22,5 +22,5 @@ packages: [
   "package-sync"
   "Remote-FTP"
   "terminal-plus"
-  "vim-mode"
+  "vim-mode-plus"
 ]

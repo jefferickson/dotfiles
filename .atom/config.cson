@@ -15,6 +15,8 @@
   editor:
     fontFamily: "Input Mono"
     fontSize: 12
+    showIndentGuide: true
+    showInvisibles: true
   "exception-reporting":
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
   "go-plus":
@@ -28,6 +30,7 @@
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
   "linter-ui-default":
+    panelHeight: 168
     showPanel: true
   minimap:
     disablePythonDocLinks: true
