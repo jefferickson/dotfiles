@@ -21,6 +21,7 @@ packages: [
   "minimap-highlight-selected"
   "package-sync"
   "Remote-FTP"
+  "teletype"
   "terminal-plus"
   "vim-mode-plus"
 ]
