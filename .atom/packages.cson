@@ -1,5 +1,6 @@
 packages: [
   "atom-beautify"
+  "atom-typescript"
   "autoclose-html"
   "autocomplete-paths"
   "autocomplete-python"
@@ -9,7 +10,6 @@ packages: [
   "go-plus"
   "go-signature-statusbar"
   "highlight-selected"
-  "Hydrogen"
   "hyperclick"
   "intentions"
   "language-scala"
@@ -20,7 +20,6 @@ packages: [
   "minimap"
   "minimap-highlight-selected"
   "package-sync"
-  "Remote-FTP"
   "teletype"
   "terminal-plus"
   "vim-mode-plus"

@@ -1,12 +1,26 @@
 "*":
   "atom-beautify":
     general:
-      _analyticsUserId: "05e37f05-de88-45d2-adce-16cc3a857b05"
-    python:
-      max_line_length: 120
+      beautifyEntireFileOnSave: false
+    python: {}
+  "autoclose-html":
+    forceInline: [
+      "title"
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5"
+      "h6"
+      "li"
+    ]
+    makeNeverCloseSelfClosing: false
   "autocomplete-python":
     fuzzyMatcher: false
     useKite: false
+  "bracket-matcher":
+    autocompleteBrackets: false
+    highlightMatchingLineNumber: true
   core:
     disabledPackages: [
       "autocomplete-paths"
@@ -26,11 +40,14 @@
   linter:
     lintOnChange: false
   "linter-flake8":
-    maxLineLength: 150
+    hangClosing: true
+    ignoreErrorCodes: [
+      "H301"
+    ]
+    maxLineLength: 99
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
   "linter-ui-default":
-    panelHeight: 168
     showPanel: true
   minimap:
     disablePythonDocLinks: true
@@ -40,7 +57,6 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
-  "tree-view":
-    hideVcsIgnoredFiles: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
