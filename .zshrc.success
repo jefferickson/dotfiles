@@ -17,9 +17,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 source $ZSH/oh-my-zsh.sh
 
-alias avenv="source activate"
-alias dvenv="source deactivate"
-
 alias swe="~/svenskt-ord.sh"
 
 # Go path
