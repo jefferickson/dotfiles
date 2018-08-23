@@ -24,6 +24,8 @@
   core:
     disabledPackages: [
       "autocomplete-paths"
+      "teletype"
+      "linter-js-standard"
     ]
     telemetryConsent: "no"
   editor:
@@ -48,6 +50,7 @@
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
   "linter-ui-default":
+    panelHeight: 202
     showPanel: true
   minimap:
     disablePythonDocLinks: true
