@@ -1,22 +1,27 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/jeff/.oh-my-zsh
+export ZSH=/Users/jeff/git-repos/oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo)
+plugins=(iterm2-touch-bar-status sudo)
 
-# User configuration
+# virtualenvwrapper
+export WORKON_HOME=~/.envs
+source /usr/local/bin/virtualenvwrapper.sh
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin"
-
+# oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
 alias swe="~/svenskt-ord.sh"
 
-# go path
-export GOPATH=$HOME/go
+# Go path
+export GOPATH=$HOME/gowork
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# iTerm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
