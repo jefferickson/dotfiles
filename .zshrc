@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jeff/git-repos/oh-my-zsh
+export ZSH=$HOME/git-repos/oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="robbyrussell"
