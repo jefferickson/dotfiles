@@ -1,3 +1,6 @@
+" first install https://github.com/amix/vimrc
+" and symlink this to ~/.vim_runtime/my_configs.vim
+
 " vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
