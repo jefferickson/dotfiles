@@ -25,3 +25,6 @@ eval "$(direnv hook zsh)"
 
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# System-specific .zshrc
+source $HOME/.zshrc.specific
