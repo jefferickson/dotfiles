@@ -1,5 +1,6 @@
 packages: [
   "atom-beautify"
+  "atom-ide-ui"
   "atom-typescript"
   "autoclose-html"
   "autocomplete-paths"
