@@ -47,3 +47,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
 let ayucolor="mirage"
 colorscheme ayu
+
+" overlength lines
+highlight OverLength ctermbg=235 guibg=#2c2d27
+let &colorcolumn="79,".join(range(119,999),",")
