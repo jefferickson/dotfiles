@@ -3,6 +3,9 @@
     general:
       beautifyEntireFileOnSave: false
     python: {}
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": "never"
   "autoclose-html":
     forceInline: [
       "title"
@@ -42,15 +45,17 @@
   linter:
     lintOnChange: false
   "linter-flake8":
+    executablePath: "~/.envs/general3/bin/flake8"
     hangClosing: true
     ignoreErrorCodes: [
       "H301"
+      "E501"
     ]
-    maxLineLength: 99
+    maxLineLength: 119
     pep8ErrorsToWarnings: true
   "linter-scalac": {}
   "linter-ui-default":
-    panelHeight: 202
+    panelHeight: 213
     showPanel: true
   minimap:
     disablePythonDocLinks: true
