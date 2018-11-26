@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim'
+Plug '/usr/local/opt/fzf'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -36,6 +37,9 @@ let g:ale_lint_on_enter = 1
 set splitright
 set splitbelow
 
+" vsplit
+nmap <leader>vs :vsplit
+
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
@@ -51,3 +55,25 @@ colorscheme ayu
 " overlength lines
 highlight OverLength ctermbg=235 guibg=#2c2d27
 let &colorcolumn="79,".join(range(119,999),",")
+
+" lightline config
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
+
