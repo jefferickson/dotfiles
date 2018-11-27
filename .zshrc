@@ -16,6 +16,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias swe="~/svenskt-ord.sh"
+alias i="ipython"
+alias j="jobs"
 
 # Go path
 export GOPATH=$HOME/gowork
