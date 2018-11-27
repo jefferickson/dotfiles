@@ -18,6 +18,10 @@ source $ZSH/oh-my-zsh.sh
 alias swe="~/svenskt-ord.sh"
 alias i="ipython"
 alias j="jobs"
+alias wo="workon"
+alias wo2="workon general2"
+alias wo3="workon general3"
+alias de="deactivate"
 
 # Go path
 export GOPATH=$HOME/gowork
