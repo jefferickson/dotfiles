@@ -57,18 +57,39 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<key>NSTouchBarConfig: full screen</key>
 	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
+		<key>CurrentItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierStatus</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+		</array>
+		<key>DefaultItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierManPage</string>
+			<string>iTermTouchBarIdentifierColorPreset</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>tab bar</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
+		</array>
 	</dict>
 	<key>NSTouchBarConfig: regular</key>
 	<dict>
 		<key>CurrentItems</key>
 		<array>
-			<string>iTermTouchBarIdentifierFunctionKeys</string>
 			<string>iTermTouchBarIdentifierStatus</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
 			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
 		</array>
 		<key>DefaultItems</key>
 		<array>
@@ -83,13 +104,13 @@
 		</array>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>370 191 700 622 0 0 1440 877 </string>
+	<string>650 499 620 392 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 321 796 486 0 0 1440 877 </string>
+	<string>327 126 1016 512 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>0 0 1440 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 70 650 452 0 0 1440 877 </string>
+	<string>10 -59 1440 878 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -493,9 +514,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>b</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -521,9 +542,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>f</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -662,7 +683,7 @@
 			<key>Normal Font</key>
 			<string>InputMono-Regular 12</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -727,12 +748,10 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>9E19BFBE-60DD-4C0F-ADB7-ADC96446A39D</string>
+	<string>EAA31F4C-D3C7-43F6-9E7E-E3E33BA1C5E5</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -740,7 +759,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>559175526.25170505</real>
+	<real>563908417.93296003</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -775,21 +794,23 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jeff/git-repos/dotfiles</string>
+	<string>/Users/jeferick/git-repos/dotfiles</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
+	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=41</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=42</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-22T13:38:11Z</date>
+	<date>2018-11-28T14:36:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -805,6 +826,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.2.4beta4</string>
+	<string>3.2.6beta4</string>
 </dict>
 </plist>
