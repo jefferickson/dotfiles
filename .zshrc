@@ -22,6 +22,7 @@ alias wo="workon"
 alias wo2="workon general2"
 alias wo3="workon general3"
 alias de="deactivate"
+alias gs="git status"
 
 # Go path
 export GOPATH=$HOME/gowork
