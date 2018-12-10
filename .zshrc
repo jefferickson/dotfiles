@@ -23,6 +23,9 @@ alias wo2="workon general2"
 alias wo3="workon general3"
 alias de="deactivate"
 alias gs="git status"
+alias gdh="git diff HEAD~1"
+alias gdsum="git diff --compact-summary"
+alias gdsh="git diff --compact-summary HEAD~1"
 
 # Go path
 export GOPATH=$HOME/gowork
