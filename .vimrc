@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'ayu-theme/ayu-vim'
 Plug 'matze/vim-move'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
