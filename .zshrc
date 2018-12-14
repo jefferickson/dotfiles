@@ -2,7 +2,7 @@
 export ZSH=$HOME/git-repos/oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jeffyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(iterm2-touch-bar-status sudo)
