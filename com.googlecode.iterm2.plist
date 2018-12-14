@@ -85,11 +85,7 @@
 		<array>
 			<string>iTermTouchBarIdentifierStatus</string>
 			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
-			<string>iTermTouchBarIdentifierFunctionKeys</string>
 			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
-			<string>iTermTouchBarIdentifierAddMark</string>
-			<string>iTermTouchBarIdentifierPreviousMark</string>
-			<string>iTermTouchBarIdentifierNextMark</string>
 		</array>
 		<key>DefaultItems</key>
 		<array>
@@ -106,11 +102,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 499 620 392 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>327 126 1016 512 0 0 1440 878 </string>
+	<string>303 1024 796 486 -268 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 878 0 0 1440 878 </string>
+	<string>-256 900 1920 1058 -256 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>10 -59 1440 878 0 0 1440 878 </string>
+	<string>222 1266 650 452 -268 900 1920 1058 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -810,7 +806,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-28T14:36:18Z</date>
+	<date>2018-12-12T15:18:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -824,8 +820,8 @@
 	<key>WindowNumber</key>
 	<true/>
 	<key>WordCharacters</key>
-	<string>/-+\~_.</string>
+	<string>f</string>
 	<key>iTerm Version</key>
-	<string>3.2.6beta4</string>
+	<string>3.2.7beta1</string>
 </dict>
 </plist>

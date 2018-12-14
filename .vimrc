@@ -9,9 +9,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'sheerun/vim-polyglot'
 Plug 'ayu-theme/ayu-vim'
-Plug '/usr/local/opt/fzf'
+Plug 'matze/vim-move'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -77,3 +76,5 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
+" vim-move
+let g:move_key_modifier = 'C'
