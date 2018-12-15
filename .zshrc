@@ -7,21 +7,19 @@ ZSH_THEME="jeffyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(iterm2-touch-bar-status sudo)
 
-# virtualenvwrapper
-export WORKON_HOME=~/.envs
-source /usr/local/bin/virtualenvwrapper.sh
-
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# pyenv-virtualenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Aliases
 alias swe="~/svenskt-ord.sh"
 alias i="ipython"
 alias j="jobs"
-alias wo="workon"
-alias wo2="workon general2"
-alias wo3="workon general3"
-alias de="deactivate"
+alias wo="pyenv activate"
+alias de="pyenv deactivate"
 alias gs="git status"
 alias gdh="git diff HEAD~1"
 alias gdsum="git diff --compact-summary"
@@ -36,9 +34,9 @@ eval "$(direnv hook zsh)"
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# System-specific .zshrc
-source $HOME/.zshrc.specific
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='`'
+
+# System-specific .zshrc
+source $HOME/.zshrc.specific
