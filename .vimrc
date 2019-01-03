@@ -15,11 +15,11 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
-" while learning, disable arrow keys
+" use arrow keys for something else in normal mode
 noremap <Up> <NOP>
 noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+noremap <Left> :bprev<CR>
+noremap <Right> :bnext<CR>
 
 " line numbers
 set number
