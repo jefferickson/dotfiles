@@ -13,6 +13,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
 Plug 'jpalardy/vim-slime'
+Plug 'Integralist/vim-mypy'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -80,3 +81,6 @@ let g:lightline = {
 
 " vim-move
 let g:move_key_modifier = 'C'
+
+" vim-mypy
+nmap <leader>ll :call mypy#ExecuteMyPy()<cr>
