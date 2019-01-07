@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ayu-theme/ayu-vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
