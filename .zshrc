@@ -27,6 +27,7 @@ alias gdsh="git diff --compact-summary HEAD~1"
 
 # Go path
 export GOPATH=$HOME/gowork
+export PATH=$PATH:$GOPATH/bin
 
 # direnv
 eval "$(direnv hook zsh)"

@@ -14,6 +14,7 @@ Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
 Plug 'jpalardy/vim-slime'
 Plug 'Integralist/vim-mypy'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -84,3 +85,8 @@ let g:move_key_modifier = 'C'
 
 " vim-mypy
 nmap <leader>ll :call mypy#ExecuteMyPy()<cr>
+
+" omni-completion
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+autocmd BufWritePre * lclose
