@@ -90,3 +90,7 @@ nmap <leader>ll :call mypy#ExecuteMyPy()<cr>
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd BufWritePre * lclose
+
+" golint
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow

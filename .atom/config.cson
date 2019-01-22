@@ -4,6 +4,8 @@
       beautifyEntireFileOnSave: false
     python: {}
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
     use:
       "atom-ide-diagnostics-ui": "never"
   "autoclose-html":

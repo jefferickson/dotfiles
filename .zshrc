@@ -27,7 +27,7 @@ alias gdsh="git diff --compact-summary HEAD~1"
 
 # Go path
 export GOPATH=$HOME/gowork
-export PATH=$PATH:$GOPATH/bin
+PATH=$PATH:$GOPATH/bin
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -41,3 +41,18 @@ export FZF_COMPLETION_TRIGGER='`'
 
 # System-specific .zshrc
 source $HOME/.zshrc.specific
+
+# Remove duplicate entries from PATH
+if [ -n "$PATH" ]; then
+  old_PATH=$PATH:; PATH=
+  while [ -n "$old_PATH" ]; do
+    x=${old_PATH%%:*}       # the first remaining entry
+    case $PATH: in
+      *:"$x":*) ;;          # already there
+      *) PATH=$PATH:$x;;    # not there yet
+    esac
+    old_PATH=${old_PATH#*:}
+  done
+  PATH=${PATH#:}
+  unset old_PATH x
+fi
