@@ -1,5 +1,7 @@
 " first install https://github.com/amix/vimrc
 " and symlink this to ~/.vim_runtime/my_configs.vim
+" auto-pairs has caused slowness in the past, so may want to remove that as
+"     well
 
 " vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
