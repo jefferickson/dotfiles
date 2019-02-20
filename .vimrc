@@ -31,6 +31,9 @@ noremap <Right> :bnext<CR>
 set number
 set relativenumber
 
+" , in leader, so use \ as reverse-search
+noremap \ ,
+
 " always remove trailing whitespace
 if has("autocmd")
     autocmd BufWritePre * :call CleanExtraSpaces()
