@@ -50163,9 +50163,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 499 620 392 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>750 1496 928 394 -256 900 1920 1080 </string>
+	<string>315 336 918 514 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>261 1238 650 452 -256 900 1920 1080 </string>
+	<string>450 426 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-256 1528 650 452 -256 900 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -50414,7 +50414,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blinking Cursor</key>
-			<false/>
+			<true/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -50961,7 +50961,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-01-25T15:35:12Z</date>
+	<date>2019-02-14T01:37:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
