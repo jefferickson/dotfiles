@@ -112,3 +112,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
+
+" run `make build-frontend`
+map <leader>mm :!make build-frontend<cr>
