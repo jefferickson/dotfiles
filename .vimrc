@@ -18,6 +18,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'Integralist/vim-mypy'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'elmcast/elm-vim'
+Plug 'ruanyl/vim-gh-line'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
