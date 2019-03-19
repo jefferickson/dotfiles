@@ -1,0 +1,9 @@
+{
+    /* Place in ~/Library/KeyBindings/DefaultKeyBinding.dict */
+
+    /* Fix Home/End for external keyboards (Das) */
+    /* Home Button*/
+    "\UF729" = "moveToBeginningOfLine:";
+    /* End Button */
+    "\UF72B" = "moveToEndOfLine:";
+}
