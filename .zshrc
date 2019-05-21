@@ -29,6 +29,10 @@ alias gdsh="git diff --compact-summary HEAD~1"
 export GOPATH=$HOME/gowork
 PATH=$PATH:$GOPATH/bin
 
+# perl
+export PERLPATH=/usr/local/Cellar/perl/5.28.1
+PATH=$PATH:$PERLPATH/bin
+
 # direnv
 eval "$(direnv hook zsh)"
 
