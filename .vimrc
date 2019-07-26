@@ -19,6 +19,7 @@ Plug 'Integralist/vim-mypy'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'elmcast/elm-vim'
 Plug 'ruanyl/vim-gh-line'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
