@@ -20,6 +20,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'elmcast/elm-vim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'sheerun/vim-polyglot'
+Plug 'yggdroot/indentline'
+Plug 'mechatroner/rainbow_csv'
+Plug 'mhinz/vim-signify'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
