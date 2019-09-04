@@ -3,3 +3,5 @@
 	email = jeff@erick.so
 [core]
 	editor = vim
+[pager]
+    branch = false
