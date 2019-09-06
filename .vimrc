@@ -68,6 +68,10 @@ colorscheme ayu
 highlight OverLength ctermbg=235 guibg=#2c2d27
 let &colorcolumn="79,".join(range(119,999),",")
 
+" line highlighting
+set cursorline
+set cursorcolumn
+
 " lightline config
 let g:lightline = {
       \ 'colorscheme': 'wombat',
