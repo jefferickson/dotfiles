@@ -120,5 +120,14 @@ endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 
+" Trim blank lines at EOF
+function TrimEndLines()
+    let save_cursor = getpos(".")
+    :silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
+endfunction
+
+au BufWritePre *.py call TrimEndLines()
+
 " run `make build-frontend`
 map <leader>mm :w<cr>:!make build-frontend<cr>
