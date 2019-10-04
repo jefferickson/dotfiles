@@ -72,6 +72,9 @@
                             "modifiers": [
                                 "left_control"
                             ]
+                        },
+                        {
+                            "key_code": "j"
                         }
                     ],
                     "conditions": [
