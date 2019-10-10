@@ -62,19 +62,13 @@
                     },
                     "to": [
                         {
-                            "key_code": "c",
+                            "key_code": "a",
                             "modifiers": [
                                 "left_control"
                             ]
                         },
                         {
-                            "key_code": "c",
-                            "modifiers": [
-                                "left_control"
-                            ]
-                        },
-                        {
-                            "key_code": "j"
+                            "key_code": "z"
                         }
                     ],
                     "conditions": [
