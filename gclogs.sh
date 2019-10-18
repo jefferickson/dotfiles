@@ -1,6 +1,8 @@
 #!/bin/bash
 
-gcloud logging read --format=json "resource.type=gae_app severity>=WARNING $1" |
+SEARCH="$@"
+
+gcloud logging read --format=json "resource.type=gae_app severity>=WARNING $SEARCH" |
     jq '[
           .[]
             | {
