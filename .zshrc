@@ -1,14 +1,14 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/git-repos/oh-my-zsh
+# export ZSH=$HOME/git-repos/oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="jeffyrussell"
+# ZSH_THEME="jeffyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(iterm2-touch-bar-status sudo)
+# plugins=(iterm2-touch-bar-status sudo)
 
 # oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # pyenv-virtualenv
 eval "$(pyenv init -)"
