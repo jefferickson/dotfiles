@@ -58,7 +58,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "right_control"
+                        "key_code": "application"
                     },
                     "to": [
                         {
@@ -83,7 +83,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "application"
+                        "key_code": "right_control"
                     },
                     "to": [
                         {
