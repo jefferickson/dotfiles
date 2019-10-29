@@ -112,7 +112,7 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 " Multipurpose Tab Key (from Gary Bernhardt)
 function! InsertTabWrapper()
     let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
+    if !col || (getline('.')[col - 1] !~ '\k' && getline('.')[col - 1] !~ '\.')
         return "\<tab>"
     else
         return "\<c-p>"
