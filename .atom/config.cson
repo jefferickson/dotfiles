@@ -41,6 +41,9 @@
   "exception-reporting":
     userId: "4362823c-a373-51e1-55c4-e377640a482a"
   "go-plus":
+    autocomplete:
+      proposeBuiltins: false
+    format: {}
     panelDisplayMode: "closed"
   "jupyter-notebook":
     jupyterPath: "/Users/jerickson/anaconda/envs/magnus_bokeh11/bin/"
@@ -58,7 +61,6 @@
   "linter-scalac": {}
   "linter-ui-default":
     panelHeight: 213
-    showPanel: true
   minimap:
     disablePythonDocLinks: true
     plugins:
