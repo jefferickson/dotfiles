@@ -30,6 +30,10 @@ noremap <Down> <NOP>
 noremap <Left> :bprev<CR>
 noremap <Right> :bnext<CR>
 
+" use PgUp/PgDn as C+UD
+map <PageUp> <C-u>
+map <PageDown> <C-d>
+
 " line numbers
 set number
 set relativenumber
