@@ -21,6 +21,7 @@ Plug 'elmcast/elm-vim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
+Plug 'jeetsukumaran/vim-indentwise'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
