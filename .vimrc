@@ -106,7 +106,7 @@ let g:move_key_modifier = 'C'
 nmap <leader>ll :call mypy#ExecuteMyPy()<cr>
 
 " omni-completion
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd CursorMoved * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd BufWritePre * lclose
 
@@ -114,13 +114,21 @@ autocmd BufWritePre * lclose
 set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
+" go build
+autocmd BufWritePost,FileWritePost *.go execute ':GoBuild' | cwindow
+
 " Multipurpose Tab Key (from Gary Bernhardt)
 function! InsertTabWrapper()
+    let extension = expand('%:e')
     let col = col('.') - 1
     if !col || (getline('.')[col - 1] !~ '\k' && getline('.')[col - 1] !~ '\.')
         return "\<tab>"
     else
-        return "\<c-p>"
+        if extension == "go"
+            return "\<c-x>\<c-o>"
+        else
+            return "\<c-p>"
+        endif
     endif
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
