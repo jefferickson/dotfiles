@@ -26,8 +26,8 @@ call plug#end()
 " NOTE: Run :PlugInstall to install these
 
 " use arrow keys for something else in normal mode
-map <Up> <C-i>
-map <Down> <C-o>
+map <Up> <C-o>
+map <Down> <C-i>
 noremap <Left> :bprev<CR>
 noremap <Right> :bnext<CR>
 
