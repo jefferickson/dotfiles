@@ -36,6 +36,9 @@ PATH=$PATH:$GOPATH/bin
 export PERLPATH=/usr/local/Cellar/perl/5.28.1
 PATH=$PATH:$PERLPATH/bin
 
+# haskell
+PATH=$PATH:$HOME/.local/bin
+
 # direnv
 eval "$(direnv hook zsh)"
 
