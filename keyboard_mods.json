@@ -1,6 +1,5 @@
 {
     "title": "Jeff's Complex Mods",
-    "description": "tmux right-alt to move left pane",
     "rules": [
         {
             "description": "Various mods for Jeff",
