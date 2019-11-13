@@ -22,6 +22,7 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
 Plug 'jeetsukumaran/vim-indentwise'
+Plug 'majutsushi/tagbar'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -119,6 +120,9 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " go build
 autocmd BufWritePost,FileWritePost *.go execute ':GoBuild' | cwindow
+
+" tagbar
+nmap <F3> :TagbarToggle<CR>
 
 " Multipurpose Tab Key (from Gary Bernhardt)
 function! InsertTabWrapper()
