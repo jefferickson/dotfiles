@@ -42,6 +42,10 @@ set relativenumber
 
 " ctags
 set tags=~/.tags
+nmap <tab> <c-]>
+
+" tagbar
+nmap <F3> :TagbarToggle<CR>
 
 " , in leader, so use \ as reverse-search
 noremap \ ,
@@ -120,9 +124,6 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " go build
 autocmd BufWritePost,FileWritePost *.go execute ':GoBuild' | cwindow
-
-" tagbar
-nmap <F3> :TagbarToggle<CR>
 
 " Multipurpose Tab Key (from Gary Bernhardt)
 function! InsertTabWrapper()
