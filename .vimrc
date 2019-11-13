@@ -39,6 +39,9 @@ map <PageDown> <C-d>
 set number
 set relativenumber
 
+" ctags
+set tags=~/.tags
+
 " , in leader, so use \ as reverse-search
 noremap \ ,
 
