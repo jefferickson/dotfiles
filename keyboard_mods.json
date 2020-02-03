@@ -9,7 +9,7 @@
                     "from": {
                         "key_code": "right_gui"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "a",
                             "modifiers": [
@@ -34,7 +34,7 @@
                     "from": {
                         "key_code": "right_alt"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "a",
                             "modifiers": [
@@ -59,7 +59,7 @@
                     "from": {
                         "key_code": "application"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "a",
                             "modifiers": [
@@ -84,7 +84,7 @@
                     "from": {
                         "key_code": "right_control"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "spacebar",
                             "modifiers": [
@@ -99,7 +99,7 @@
                     "from": {
                         "key_code": "left_shift"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "z"
                         },
@@ -121,7 +121,7 @@
                     "from": {
                         "key_code": "f1"
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "quote",
                             "modifiers": [
@@ -152,7 +152,97 @@
                     "from": {
                         "key_code": "f2"
                     },
-                    "to": [
+                    "to_if_alone": [
+                        {
+                            "key_code": "escape"
+                        },
+                        {
+                            "key_code": "comma"
+                        },
+                        {
+                            "key_code": "p"
+                        },
+                        {
+                            "key_code": "p"
+                        },
+                        {
+                            "key_code": "i"
+                        },
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "left_gui"
+                            ]
+                        },
+                        {
+                            "key_code": "escape"
+                        },
+                        {
+                            "key_code": "comma"
+                        },
+                        {
+                            "key_code": "p"
+                        },
+                        {
+                            "key_code": "p"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "c",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_gui"
+                            ]
+                        }
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "quote",
+                            "modifiers": [
+                                "right_shift"
+                            ]
+                        },
+                        {
+                            "key_code": "8",
+                            "modifiers": [
+                                "right_shift"
+                            ]
+                        },
+                        {
+                            "key_code": "y"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": [
+                                "left_gui"
+                            ]
+                        }
+                    },
+                    "to_if_alone": [
                         {
                             "key_code": "escape"
                         },
