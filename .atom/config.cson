@@ -61,6 +61,7 @@
   "linter-scalac": {}
   "linter-ui-default":
     panelHeight: 213
+    showPanel: true
   minimap:
     disablePythonDocLinks: true
     plugins:
