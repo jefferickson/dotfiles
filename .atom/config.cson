@@ -31,6 +31,8 @@
       "autocomplete-paths"
       "teletype"
       "linter-js-standard"
+      "vim-mode-plus"
+      "linter-flake8"
     ]
     telemetryConsent: "no"
   editor:
