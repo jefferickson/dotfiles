@@ -1,7 +1,11 @@
 [user]
-	name = Jeff Erickson
-	email = jeff@erick.so
+    name = Jeff Erickson
+    email = jeff@erick.so
 [core]
-	editor = vim
+    editor = vim
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = 0
 [pager]
     branch = false
