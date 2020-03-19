@@ -50939,6 +50939,15 @@
 				<key>Red Component</key>
 				<real>0.75813597440719604</real>
 			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>raw command</string>
+				<key>editor</key>
+				<string>com.github.atom</string>
+				<key>text</key>
+				<string>echo vim \1 | pbcopy</string>
+			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
@@ -51049,6 +51058,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.7beta4</string>
 		<string>3.3.8beta3</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
@@ -51058,10 +51068,12 @@
 		<string>3.3.5beta1</string>
 		<string>3.3.3beta2</string>
 		<string>3.3.8beta4</string>
-		<string>3.3.7beta2</string>
 		<string>3.3.5beta3</string>
+		<string>3.3.9beta1</string>
 		<string>3.3.2</string>
-		<string>3.3.7beta4</string>
+		<string>3.3.7beta2</string>
+		<string>3.3.10beta2</string>
+		<string>3.3.10beta1</string>
 		<string>3.3.8beta1</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -51069,16 +51081,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{280, 1035}</string>
+		<string>{519, 860}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>4201A2E9-4B75-4129-BADB-693C7D78A51F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>163</integer>
+	<integer>244</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -51861,7 +51873,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-22T15:41:42Z</date>
+	<date>2020-03-19T13:42:12Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
@@ -51887,7 +51899,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.8beta5</string>
+	<string>3.3.10beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
