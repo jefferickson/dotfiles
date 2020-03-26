@@ -50171,9 +50171,9 @@
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
-	<integer>96</integer>
+	<integer>27</integer>
 	<key>HotkeyCode</key>
-	<integer>50</integer>
+	<integer>53</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
@@ -51070,7 +51070,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.8beta1</string>
+		<string>3.3.2</string>
 		<string>3.3.8beta3</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
@@ -51084,9 +51084,9 @@
 		<string>3.3.7beta2</string>
 		<string>3.3.5beta3</string>
 		<string>3.3.10beta1</string>
-		<string>3.3.7beta4</string>
-		<string>3.3.2</string>
 		<string>3.3.10beta2</string>
+		<string>3.3.7beta4</string>
+		<string>3.3.8beta1</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -51108,7 +51108,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4201A2E9-4B75-4129-BADB-693C7D78A51F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>260</integer>
+	<integer>262</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -51891,7 +51891,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-25T16:53:32Z</date>
+	<date>2020-03-26T16:53:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
