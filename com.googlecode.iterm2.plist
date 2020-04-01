@@ -50077,6 +50077,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>41D981EF-92C0-457E-9FE5-F513A3FA4CBB</string>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -50182,6 +50184,8 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>Log Smart Selection Debug Info</key>
+	<integer>1</integer>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/git-repos/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -51070,8 +51074,9 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
+		<string>3.3.7beta2</string>
 		<string>3.3.8beta3</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
 		<string>3.3.8beta5</string>
@@ -51080,13 +51085,13 @@
 		<string>3.3.5beta1</string>
 		<string>3.3.3beta2</string>
 		<string>3.3.8beta4</string>
-		<string>3.3.9beta1</string>
-		<string>3.3.7beta2</string>
 		<string>3.3.5beta3</string>
+		<string>3.3.9beta1</string>
 		<string>3.3.10beta1</string>
-		<string>3.3.10beta2</string>
 		<string>3.3.7beta4</string>
+		<string>3.3.10beta2</string>
 		<string>3.3.8beta1</string>
+		<string>3.3.2</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -51108,7 +51113,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4201A2E9-4B75-4129-BADB-693C7D78A51F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>262</integer>
+	<integer>278</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -51891,7 +51896,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-26T16:53:32Z</date>
+	<date>2020-03-31T14:14:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
@@ -51917,7 +51922,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.10beta2</string>
+	<string>3.3.10beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
