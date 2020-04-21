@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>org.sil.ukelele.keyboardlayout.esperanto</string>
+	<key>CFBundleName</key>
+	<string>Esperanto</string>
+	<key>CFBundleVersion</key>
+	<string></string>
+	<key>KLInfo_Esperanto</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>org.sil.ukelele.keyboardlayout.esperanto.esperanto</string>
+		<key>TISIntendedLanguage</key>
+		<string>eo</string>
+	</dict>
+</dict>
+</plist>
