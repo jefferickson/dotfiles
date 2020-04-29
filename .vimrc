@@ -11,7 +11,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'ayu-theme/ayu-vim'
+Plug 'jefferickson/ayu-vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
 Plug 'jpalardy/vim-slime'
