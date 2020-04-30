@@ -50256,6 +50256,8 @@
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1680 1027 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -50480,13 +50482,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.14901960784313725</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.14901960784313725</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.14901960784313725</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -51074,22 +51076,23 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.7beta2</string>
+		<string>3.3.10beta2</string>
 		<string>3.3.8beta3</string>
-		<string>3.3.10beta3</string>
+		<string>3.3.7beta4</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.7beta3</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.8beta2</string>
 		<string>3.3.5beta1</string>
 		<string>3.3.3beta2</string>
 		<string>3.3.8beta4</string>
-		<string>3.3.5beta3</string>
 		<string>3.3.9beta1</string>
+		<string>3.3.7beta2</string>
 		<string>3.3.10beta1</string>
-		<string>3.3.7beta4</string>
-		<string>3.3.10beta2</string>
+		<string>3.3.9</string>
+		<string>3.3.5beta3</string>
 		<string>3.3.8beta1</string>
 		<string>3.3.2</string>
 	</array>
@@ -51101,6 +51104,17 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {1680, 1050}}</string>
+		<key>topLeft</key>
+		<string>{537, 907}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
@@ -51113,7 +51127,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4201A2E9-4B75-4129-BADB-693C7D78A51F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>278</integer>
+	<integer>340</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -51896,11 +51910,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-31T14:14:25Z</date>
+	<date>2020-04-28T22:51:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUSkippedVersion</key>
-	<string>3.3.4beta1</string>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowBookmarkName</key>
