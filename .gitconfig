@@ -9,3 +9,5 @@
     prompt = 0
 [pager]
     branch = false
+[pull]
+    ff = only
