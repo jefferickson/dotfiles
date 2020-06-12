@@ -23,6 +23,8 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'majutsushi/tagbar'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
@@ -109,6 +111,13 @@ let g:lightline = {
 
 " vim-move
 let g:move_key_modifier = 'C'
+
+" fzf
+nnoremap <leader>f :GFiles<CR>
+
+" MRU
+let MRU_Max_Entries = 400
+map <C-f> :MRU<CR>
 
 " vim-mypy
 nmap <leader>ll :call mypy#ExecuteMyPy()<cr>
