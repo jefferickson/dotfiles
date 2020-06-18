@@ -35,6 +35,7 @@ alias gs="git status"
 alias gdh="git diff HEAD~1"
 alias gdsum="git diff --compact-summary"
 alias gdsh="git diff --compact-summary HEAD~1"
+alias dd="lazydocker"
 alias gg="lazygit"
 alias c="clear"
 

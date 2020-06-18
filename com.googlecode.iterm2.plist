@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>0</integer>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -51076,25 +51080,27 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.10beta2</string>
+		<string>3.3.2</string>
 		<string>3.3.8beta3</string>
-		<string>3.3.7beta4</string>
+		<string>3.3.8beta1</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.7beta3</string>
-		<string>3.3.10beta3</string>
+		<string>3.3.10beta4</string>
 		<string>3.3.8beta2</string>
 		<string>3.3.5beta1</string>
 		<string>3.3.3beta2</string>
 		<string>3.3.8beta4</string>
-		<string>3.3.9beta1</string>
 		<string>3.3.7beta2</string>
-		<string>3.3.10beta1</string>
-		<string>3.3.9</string>
 		<string>3.3.5beta3</string>
-		<string>3.3.8beta1</string>
-		<string>3.3.2</string>
+		<string>3.3.9beta1</string>
+		<string>3.3.10beta1</string>
+		<string>3.3.10beta2</string>
+		<string>3.3.7beta4</string>
+		<string>3.3.10beta3</string>
+		<string>3.3.11beta1</string>
+		<string>3.3.9</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -51120,14 +51126,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{418, 827}</string>
+		<string>{464, 816}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>4201A2E9-4B75-4129-BADB-693C7D78A51F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>340</integer>
+	<integer>405</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -51910,7 +51916,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-28T22:51:41Z</date>
+	<date>2020-06-15T23:58:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -51934,7 +51940,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.10beta3</string>
+	<string>3.3.11beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
