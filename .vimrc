@@ -162,3 +162,6 @@ au BufWritePre *.py call TrimEndLines()
 
 " run `make build-frontend`
 map <leader>mm :w<cr>:!make build-frontend<cr>
+
+" insert datetime
+map <leader>d :put =strftime('%Y-%m-%d %H:%M:%S')<CR>
