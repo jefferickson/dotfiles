@@ -50,6 +50,9 @@ PATH=$PATH:$PERLPATH/bin
 # haskell
 PATH=$PATH:$HOME/.local/bin
 
+# mysql
+PATH=$PATH:/usr/local/opt/mysql-client/bin
+
 # direnv
 eval "$(direnv hook zsh)"
 
