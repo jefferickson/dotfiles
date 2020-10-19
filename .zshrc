@@ -24,6 +24,7 @@ eval "$(pyenv virtualenv-init -)"
 # Aliases
 alias swe="~/svenskt-ord.sh"
 alias рус="~/russian-word.sh"
+alias esp="~/esperanto-word.sh"
 alias gclogs="~/gclogs.sh"
 alias i="ipython"
 alias j="jobs"
