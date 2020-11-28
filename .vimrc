@@ -15,6 +15,10 @@ Plug 'tpope/vim-commentary'
 Plug 'mileszs/ack.vim'
 Plug 'yegappan/mru'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'terryma/vim-expand-region'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'tpope/vim-surround'
+Plug 'ap/vim-css-color'
 Plug 'jefferickson/ayu-vim'
 Plug 'matze/vim-move'
 Plug 'easymotion/vim-easymotion'
@@ -171,9 +175,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -204,14 +205,6 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
 
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
@@ -257,59 +250,13 @@ endfunction
 
 " Python stuff
 let python_highlight_all = 1
-au FileType python syn keyword pythonDecorator True None False self
-
-au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set ft=mako
-
-au FileType python map <buffer> F :set foldmethod=indent<cr>
-
-au FileType python inoremap <buffer> $r return
-au FileType python inoremap <buffer> $i import
-au FileType python inoremap <buffer> $p print
-au FileType python inoremap <buffer> $f # --- <esc>a
-au FileType python map <buffer> <leader>1 /class
-au FileType python map <buffer> <leader>2 /def
-au FileType python map <buffer> <leader>C ?class
-au FileType python map <buffer> <leader>D ?def
 au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
 " Javascript stuff
-au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 au FileType javascript setl nocindent
-
-au FileType javascript imap <c-t> $log();<esc>hi
-au FileType javascript imap <c-a> alert();<esc>hi
-
-au FileType javascript inoremap <buffer> $r return
-au FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
-
-function! JavaScriptFold()
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-    function! FoldText()
-        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
-endfunction
-
-" Shell stuff
-if exists('$TMUX')
-    if has('nvim')
-        set termguicolors
-    else
-        set term=screen-256color
-    endif
-endif
-
-" MRU
-let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
 
 " Nerdtree
 let g:NERDTreeWinPos = "right"
@@ -337,7 +284,7 @@ let g:ale_set_highlights = 0
 
 " Only run linting when saving the file
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 
 " Disable scrollbars
 set guioptions-=r
@@ -354,9 +301,6 @@ set undofile
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
-
-" Open Ack and put the cursor in the right position
-map <leader>g :Ack
 
 " bufExplorer
 let g:bufExplorerDefaultHelp=0
@@ -391,9 +335,6 @@ nmap <F3> :TagbarToggle<CR>
 
 " , in leader, so use \ as reverse-search
 noremap \ ,
-
-" Linting
-let g:ale_lint_on_enter = 1
 
 " better splitting
 set splitright
