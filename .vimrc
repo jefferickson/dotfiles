@@ -7,31 +7,31 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'dense-analysis/ale'
-Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-commentary'
-Plug 'mileszs/ack.vim'
-Plug 'yegappan/mru'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'terryma/vim-expand-region'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
-Plug 'jefferickson/ayu-vim'
-Plug 'matze/vim-move'
+Plug 'dense-analysis/ale'
 Plug 'easymotion/vim-easymotion'
-Plug 'jpalardy/vim-slime'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'elmcast/elm-vim'
-Plug 'ruanyl/vim-gh-line'
-Plug 'mechatroner/rainbow_csv'
-Plug 'mhinz/vim-signify'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'itchyny/lightline.vim'
 Plug 'jeetsukumaran/vim-indentwise'
-Plug 'preservim/tagbar'
+Plug 'jefferickson/ayu-vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'matze/vim-move'
+Plug 'maximbaz/lightline-ale'
+Plug 'mechatroner/rainbow_csv'
+Plug 'mhinz/vim-signify'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'mileszs/ack.vim'
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'ruanyl/vim-gh-line'
+Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'yegappan/mru'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
 
