@@ -146,6 +146,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Move the screen (without moving the cursor) in an easier way
+map ∆ <C-e>
+map ˚ <C-y>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
