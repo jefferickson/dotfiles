@@ -41,7 +41,7 @@ filetype indent on
 
 set autoread
 
-let mapleader = ","
+let mapleader = " "
 
 set so=7
 
