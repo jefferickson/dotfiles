@@ -12,7 +12,7 @@ export ZSH=$HOME/git-repos/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(sudo z)
+plugins=(z)
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -37,6 +37,7 @@ alias gdsh="git diff --compact-summary HEAD~1"
 alias hh="lazydocker"
 alias gg="lazygit"
 alias c="clear"
+alias v="vim"
 
 # Go path
 export GOPATH=$HOME/gowork
