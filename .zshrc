@@ -12,7 +12,7 @@ export ZSH=$HOME/git-repos/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(iterm2-touch-bar-status sudo z)
+plugins=(sudo z)
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -30,8 +30,6 @@ alias i="ipython"
 alias j="jobs"
 alias fgg="fg %1"
 alias fggg="fg %2"
-alias wo="pyenv activate"
-alias de="pyenv deactivate"
 alias gs="git status"
 alias gdh="git diff HEAD~1"
 alias gdsum="git diff --compact-summary"
@@ -44,21 +42,11 @@ alias c="clear"
 export GOPATH=$HOME/gowork
 PATH=$PATH:$GOPATH/bin
 
-# perl
-export PERLPATH=/usr/local/Cellar/perl/5.28.1
-PATH=$PATH:$PERLPATH/bin
-
-# haskell
-PATH=$PATH:$HOME/.local/bin
-
 # mysql
 PATH=$PATH:/usr/local/opt/mysql-client/bin
 
 # direnv
 eval "$(direnv hook zsh)"
-
-# iTerm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
