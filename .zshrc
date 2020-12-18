@@ -36,6 +36,7 @@ alias hh="lazydocker"
 alias i="ipython"
 alias j="jobs"
 alias swe="~/svenskt-ord.sh"
+alias sqlp="~/run-dh-proxy.sh"
 alias v="vim"
 alias рус="~/russian-word.sh"
 
