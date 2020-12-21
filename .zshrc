@@ -9,7 +9,7 @@ fi
 export ZSH=$HOME/git-repos/oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="powerlevel10k/powerlevel10k"
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(z)
