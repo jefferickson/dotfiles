@@ -4,29 +4,23 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/git-repos/oh-my-zsh
-
-# Set name of the theme to load.
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(z)
+# zsh syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+plugins=()
 source $ZSH/oh-my-zsh.sh
-
-# pyenv-virtualenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Aliases
 alias c="clear"
 alias esp="~/esperanto-word.sh"
 alias fgg="fg %1"
 alias fggg="fg %2"
-alias gclogs="~/gclogs.sh"
 alias gdh="git diff HEAD~1"
 alias gdsh="git diff --compact-summary HEAD~1"
 alias gdsum="git diff --compact-summary"
@@ -39,6 +33,14 @@ alias swe="~/svenskt-ord.sh"
 alias sqlp="~/run-dh-proxy.sh"
 alias v="vim"
 alias рус="~/russian-word.sh"
+
+# load z tool
+# latest at: https://raw.githubusercontent.com/rupa/z/master/z.sh
+source ~/z.sh
+
+# pyenv-virtualenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Go path
 export GOPATH=$HOME/gowork
@@ -56,12 +58,6 @@ export FZF_COMPLETION_TRIGGER='`'
 
 # System-specific .zshrc
 source $HOME/.zshrc.specific
-
-# zsh syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Remove duplicate entries from PATH
 if [ -n "$PATH" ]; then
