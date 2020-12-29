@@ -8,18 +8,15 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'easymotion/vim-easymotion'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
-Plug 'jeetsukumaran/vim-indentwise'
 Plug 'jefferickson/ayu-vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'
-Plug 'maximbaz/lightline-ale'
 Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
 Plug 'michaeljsmith/vim-indent-object'
