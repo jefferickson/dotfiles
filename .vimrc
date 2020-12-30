@@ -1,7 +1,7 @@
 " Lots of this was copied from https://github.com/amix/vimrc
 
 " set before loading plug
-let g:polyglot_disabled = ['elm']
+let g:polyglot_disabled = ['elm', 'sensible']
 
 " load plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -39,6 +39,8 @@ call plug#end()
 " NOTE: Run :PlugInstall to install these
 
 set history=500
+
+set nocompatible
 
 filetype plugin on
 filetype indent on
