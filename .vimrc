@@ -1,5 +1,9 @@
 " Lots of this was copied from https://github.com/amix/vimrc
 
+" set before loading plug
+let g:polyglot_disabled = ['elm']
+
+" load plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -7,7 +11,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
+Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
@@ -24,6 +30,7 @@ Plug 'mileszs/ack.vim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'ruanyl/vim-gh-line'
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -272,10 +279,16 @@ let g:go_fmt_command = "goimports"
 
 " ale
 let g:ale_linters = {
-\   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'golint', 'errcheck'],
+\   'elixir': ['elixir-ls']
 \}
+
+let g:ale_fixers = {
+\   'elixir': ['mix_format']
+\}
+
+let g:ale_elixir_elixir_ls_release='~/git-repos/elixir-ls/release'
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
