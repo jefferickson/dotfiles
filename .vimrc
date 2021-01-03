@@ -1,7 +1,11 @@
 " Lots of this was copied from https://github.com/amix/vimrc
 
-" set before loading plug
+" vim-polyglot settings to load _before_ plug
 let g:polyglot_disabled = ['elm', 'sensible']
+let g:focau = {'auto': 0,
+  \ 'cursors': ["\e]50;CursorShape=0\x7", "\e]50;CursorShape=0\x7", "\e]50;CursorShape=2\x7"],
+  \ 'colors': ["\e]12;white\x7", "\e]12;cyan\x7"]
+  \}
 
 " load plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
