@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TMUX_SESSION="base"
-PROXY_SCRIPT="~/git-repos/daily-harvest/local_scripts/start_sql_proxy.sh"
+PROXY_SCRIPT="cd ~ && ~/git-repos/daily-harvest/local_scripts/start_sql_proxy.sh"
 
 if [ $# == 0 ]; then
     INSTANCE="dev"
