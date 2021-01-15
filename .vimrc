@@ -15,7 +15,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'dense-analysis/ale'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -26,6 +25,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'matze/vim-move'
 Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
@@ -38,6 +38,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'vimjas/vim-python-pep8-indent'
 Plug 'yegappan/mru'
 call plug#end()
 " NOTE: Run :PlugInstall to install these
@@ -345,9 +346,8 @@ map <PageDown> <C-d>
 set number
 set relativenumber
 
-" ctags
-set tags=~/.tags
-nmap <tab> <c-]>
+" gutentags
+let g:gutentags_cache_dir = "~/.tags"
 
 " tagbar
 nmap <F3> :TagbarToggle<CR>

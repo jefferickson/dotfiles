@@ -57,6 +57,9 @@ eval "$(direnv hook zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='`'
 
+# git fuzzy
+PATH=$PATH:$HOME/git-repos/git-fuzzy/bin
+
 # System-specific .zshrc
 source $HOME/.zshrc.specific
 
