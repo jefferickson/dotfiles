@@ -157,7 +157,7 @@
                             "key_code": "escape"
                         },
                         {
-                            "key_code": "comma"
+                            "key_code": "spacebar"
                         },
                         {
                             "key_code": "p"
@@ -178,7 +178,7 @@
                             "key_code": "escape"
                         },
                         {
-                            "key_code": "comma"
+                            "key_code": "spacebar"
                         },
                         {
                             "key_code": "p"
@@ -247,7 +247,7 @@
                             "key_code": "escape"
                         },
                         {
-                            "key_code": "comma"
+                            "key_code": "spacebar"
                         },
                         {
                             "key_code": "p"
@@ -268,7 +268,7 @@
                             "key_code": "escape"
                         },
                         {
-                            "key_code": "comma"
+                            "key_code": "spacebar"
                         },
                         {
                             "key_code": "p"
@@ -539,4 +539,3 @@
         }
     ]
 }
-
