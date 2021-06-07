@@ -40,7 +40,7 @@ alias рус="~/russian-word.sh"
 source ~/z.sh
 
 # pyenv-virtualenv
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # Go path
