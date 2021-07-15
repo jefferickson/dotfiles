@@ -17,7 +17,6 @@ plugins=()
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias c="clear"
 alias esp="~/esperanto-word.sh"
 alias fgg="fg %1"
 alias fggg="fg %2"
@@ -26,13 +25,9 @@ alias gdh="git diff HEAD~1"
 alias gdsh="git diff --compact-summary HEAD~1"
 alias gdsum="git diff --compact-summary"
 alias gg="lazygit"
-alias gs="git status"
 alias hh="lazydocker"
-alias i="ipython"
-alias j="jobs"
 alias sqlp="~/run-dh-proxy.sh"
 alias swe="~/svenskt-ord.sh"
-alias v="vim"
 alias рус="~/russian-word.sh"
 
 # load z tool
@@ -56,9 +51,6 @@ eval "$(direnv hook zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='`'
-
-# git fuzzy
-PATH=$PATH:$HOME/git-repos/git-fuzzy/bin
 
 # System-specific .zshrc
 source $HOME/.zshrc.specific
