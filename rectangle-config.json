@@ -6,50 +6,50 @@
     "curtainChangeSize" : {
       "int" : 0
     },
-    "allowAnyShortcut" : {
-      "bool" : false
-    },
     "ignoredSnapAreas" : {
       "int" : 0
     },
     "almostMaximizeWidth" : {
       "float" : 0
     },
+    "allowAnyShortcut" : {
+      "bool" : false
+    },
     "screenEdgeGapBottom" : {
       "float" : 0
     },
     "todoMode" : {
-      "bool" : false
+      "bool" : true
     },
     "screenEdgeGapTop" : {
-      "float" : 0
-    },
-    "todoSidebarWidth" : {
-      "float" : 400
-    },
-    "specifiedHeight" : {
-      "float" : 1050
-    },
-    "disabledApps" : {
-
-    },
-    "fullIgnoreBundleIds" : {
-
-    },
-    "todoApplication" : {
-
-    },
-    "gapSize" : {
       "float" : 0
     },
     "SUEnableAutomaticChecks" : {
       "bool" : true
     },
-    "unsnapRestore" : {
-      "int" : 2
+    "gapSize" : {
+      "float" : 0
+    },
+    "specifiedHeight" : {
+      "float" : 1050
+    },
+    "todoSidebarWidth" : {
+      "float" : 400
+    },
+    "todoApplication" : {
+
+    },
+    "fullIgnoreBundleIds" : {
+
+    },
+    "disabledApps" : {
+
     },
     "centeredDirectionalMove" : {
       "int" : 0
+    },
+    "unsnapRestore" : {
+      "int" : 2
     },
     "snapEdgeMarginTop" : {
       "float" : 5
@@ -75,14 +75,14 @@
     "snapEdgeMarginBottom" : {
       "float" : 5
     },
-    "minimumWindowHeight" : {
-      "float" : 0
-    },
     "specifiedWidth" : {
       "float" : 1680
     },
     "footprintFade" : {
       "int" : 0
+    },
+    "minimumWindowHeight" : {
+      "float" : 0
     },
     "screenEdgeGapRight" : {
       "float" : 0
@@ -115,16 +115,16 @@
       "float" : 5
     },
     "todo" : {
-      "int" : 0
-    },
-    "obtainWindowOnClick" : {
-      "int" : 0
+      "int" : 2
     },
     "snapEdgeMarginRight" : {
       "float" : 5
     },
-    "footprintAlpha" : {
-      "float" : 0.30000001192092896
+    "obtainWindowOnClick" : {
+      "int" : 0
+    },
+    "footprintColor" : {
+
     },
     "minimumWindowWidth" : {
       "float" : 0
@@ -132,8 +132,8 @@
     "attemptMatchOnNextPrevDisplay" : {
       "int" : 0
     },
-    "footprintColor" : {
-
+    "footprintAlpha" : {
+      "float" : 0.30000001192092896
     },
     "almostMaximizeHeight" : {
       "float" : 0
@@ -146,13 +146,13 @@
     }
   },
   "shortcuts" : {
-    "previousDisplay" : {
-      "keyCode" : 123,
-      "modifierFlags" : 1835008
-    },
-    "firstFourth" : {
-      "keyCode" : 101,
+    "bottomRightSixth" : {
+      "keyCode" : 121,
       "modifierFlags" : 1572864
+    },
+    "larger" : {
+      "keyCode" : 124,
+      "modifierFlags" : 917504
     },
     "maximizeHeight" : {
       "keyCode" : 126,
@@ -162,17 +162,17 @@
       "keyCode" : 109,
       "modifierFlags" : 1572864
     },
-    "bottomRightSixth" : {
-      "keyCode" : 121,
-      "modifierFlags" : 1572864
-    },
-    "bottomCenterSixth" : {
-      "keyCode" : 119,
-      "modifierFlags" : 1572864
+    "previousDisplay" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1835008
     },
     "topLeft" : {
       "keyCode" : 123,
       "modifierFlags" : 1310720
+    },
+    "bottomCenterSixth" : {
+      "keyCode" : 119,
+      "modifierFlags" : 1572864
     },
     "bottomLeftSixth" : {
       "keyCode" : 117,
@@ -182,20 +182,16 @@
       "keyCode" : 3,
       "modifierFlags" : 1572864
     },
-    "topCenterSixth" : {
-      "keyCode" : 115,
-      "modifierFlags" : 1572864
-    },
     "restore" : {
       "keyCode" : 51,
       "modifierFlags" : 786432
     },
-    "lastFourth" : {
-      "keyCode" : 111,
+    "topCenterSixth" : {
+      "keyCode" : 115,
       "modifierFlags" : 1572864
     },
-    "leftHalf" : {
-      "keyCode" : 123,
+    "lastFourth" : {
+      "keyCode" : 111,
       "modifierFlags" : 1572864
     },
     "bottomHalf" : {
@@ -210,17 +206,21 @@
       "keyCode" : 124,
       "modifierFlags" : 1572864
     },
-    "smaller" : {
+    "leftHalf" : {
       "keyCode" : 123,
-      "modifierFlags" : 917504
+      "modifierFlags" : 1572864
+    },
+    "centerThird" : {
+      "keyCode" : 107,
+      "modifierFlags" : 1572864
     },
     "bottomRight" : {
       "keyCode" : 124,
       "modifierFlags" : 1441792
     },
-    "centerThird" : {
-      "keyCode" : 107,
-      "modifierFlags" : 1572864
+    "bottomLeft" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1441792
     },
     "nextDisplay" : {
       "keyCode" : 124,
@@ -242,9 +242,9 @@
       "keyCode" : 8,
       "modifierFlags" : 1572864
     },
-    "bottomLeft" : {
+    "smaller" : {
       "keyCode" : 123,
-      "modifierFlags" : 1441792
+      "modifierFlags" : 917504
     },
     "topLeftSixth" : {
       "keyCode" : 114,
@@ -262,11 +262,11 @@
       "keyCode" : 124,
       "modifierFlags" : 1310720
     },
-    "larger" : {
-      "keyCode" : 124,
-      "modifierFlags" : 917504
+    "firstFourth" : {
+      "keyCode" : 101,
+      "modifierFlags" : 1572864
     }
   },
   "bundleId" : "com.knollsoft.Rectangle",
-  "version" : "53"
+  "version" : "54"
 }
