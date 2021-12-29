@@ -16,6 +16,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
+Plug 'edwinb/idris2-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -31,7 +32,6 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'mhinz/vim-signify'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'ruanyl/vim-gh-line'
@@ -39,7 +39,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-" Plug 'udalov/kotlin-vim'
 Plug 'vimjas/vim-python-pep8-indent'
 Plug 'yegappan/mru'
 call plug#end()
