@@ -54,6 +54,7 @@ filetype indent on
 set autoread
 
 let mapleader = " "
+let maplocalleader = ","
 
 set so=7
 
