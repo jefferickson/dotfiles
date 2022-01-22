@@ -13,6 +13,7 @@ packages: [
   "highlight-selected"
   "hyperclick"
   "intentions"
+  "language-elixir"
   "language-groovy"
   "language-idris"
   "language-kotlin"
