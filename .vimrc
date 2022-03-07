@@ -16,7 +16,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'edwinb/idris2-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
