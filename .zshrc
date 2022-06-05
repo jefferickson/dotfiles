@@ -16,19 +16,17 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias fgg="fg %1"
 alias fggg="fg %2"
-alias fin="~/finnish-word.sh"
+alias fin="~/.finnish-word.sh"
 alias gdh="git diff HEAD~1"
 alias gdsh="git diff --compact-summary HEAD~1"
 alias gdsum="git diff --compact-summary"
 alias gg="lazygit"
 alias hh="lazydocker"
-alias sqlp="~/run-dh-proxy.sh"
-alias swe="~/svenskt-ord.sh"
-alias рус="~/russian-word.sh"
+alias swe="~/.swedish-word.sh"
 
 # load z tool
 # latest at: https://raw.githubusercontent.com/rupa/z/master/z.sh
-source ~/z.sh
+source ~/.z.sh
 
 # pyenv-virtualenv
 eval "$(pyenv init --path)"

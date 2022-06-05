@@ -1,6 +1,6 @@
 #! /bin/bash
 
-## USAGE: ./finnish-word.sh WORD
+## USAGE: ./.finnish-word.sh WORD
 ## Where WORD is the Finnish word you want to search.
 
 echo "Search: $1"

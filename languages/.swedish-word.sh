@@ -1,7 +1,7 @@
 #! /bin/bash
 
-## USAGE: ./svenskt-ord.sh ORD
-## Where ORD is the Swedish word you want to search.
+## USAGE: ./.swedish-word.sh WORD
+## Where WORD is the Swedish word you want to search.
 
 echo "Sök: $1"
 

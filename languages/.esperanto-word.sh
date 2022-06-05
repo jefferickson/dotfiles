@@ -1,6 +1,6 @@
 #! /bin/bash
 
-## USAGE: ./esperanto-word.sh VORTO WORD
+## USAGE: ./.esperanto-word.sh VORTO WORD
 ## Where VORTO is the Esperanto word you want to search and WORD is the English translation (for image search).
 
 echo "Search: $1 ($2)"

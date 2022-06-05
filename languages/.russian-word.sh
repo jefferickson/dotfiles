@@ -1,6 +1,6 @@
 #! /bin/bash
 
-## USAGE: ./russian-word.sh WORD
+## USAGE: ./.russian-word.sh WORD
 ## Where WORD is the Russian word you want to search.
 
 echo "Search: $1"
