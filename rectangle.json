@@ -188,7 +188,7 @@
   "shortcuts" : {
     "bottomCenterSixth" : {
       "keyCode" : 119,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     },
     "bottomHalf" : {
       "keyCode" : 125,
@@ -200,7 +200,7 @@
     },
     "bottomLeftSixth" : {
       "keyCode" : 117,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     },
     "bottomRight" : {
       "keyCode" : 124,
@@ -208,7 +208,7 @@
     },
     "bottomRightSixth" : {
       "keyCode" : 121,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     },
     "center" : {
       "keyCode" : 8,
@@ -219,7 +219,7 @@
       "modifierFlags" : 1572864
     },
     "centerThird" : {
-      "keyCode" : 107,
+      "keyCode" : 115,
       "modifierFlags" : 1572864
     },
     "firstFourth" : {
@@ -227,7 +227,7 @@
       "modifierFlags" : 1572864
     },
     "firstThird" : {
-      "keyCode" : 105,
+      "keyCode" : 114,
       "modifierFlags" : 1572864
     },
     "firstThreeFourths" : {
@@ -235,15 +235,15 @@
       "modifierFlags" : 1310720
     },
     "firstTwoThirds" : {
-      "keyCode" : 105,
-      "modifierFlags" : 1310720
+      "keyCode" : 117,
+      "modifierFlags" : 1572864
     },
     "lastFourth" : {
       "keyCode" : 111,
       "modifierFlags" : 1572864
     },
     "lastThird" : {
-      "keyCode" : 113,
+      "keyCode" : 116,
       "modifierFlags" : 1572864
     },
     "lastThreeFourths" : {
@@ -251,8 +251,8 @@
       "modifierFlags" : 1310720
     },
     "lastTwoThirds" : {
-      "keyCode" : 113,
-      "modifierFlags" : 1310720
+      "keyCode" : 121,
+      "modifierFlags" : 1572864
     },
     "leftHalf" : {
       "keyCode" : 123,
@@ -276,7 +276,7 @@
     },
     "topCenterSixth" : {
       "keyCode" : 115,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     },
     "topHalf" : {
       "keyCode" : 126,
@@ -288,7 +288,7 @@
     },
     "topLeftSixth" : {
       "keyCode" : 114,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     },
     "topRight" : {
       "keyCode" : 125,
@@ -296,7 +296,7 @@
     },
     "topRightSixth" : {
       "keyCode" : 116,
-      "modifierFlags" : 1572864
+      "modifierFlags" : 1310720
     }
   },
   "version" : "65"
