@@ -3,6 +3,7 @@
 ## USAGE: ./.finnish-word.sh WORD
 ## Where WORD is the Finnish word you want to search.
 
+clear
 echo "Search: $1"
 
 echo -n $1 | pbcopy
