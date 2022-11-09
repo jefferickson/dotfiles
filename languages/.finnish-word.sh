@@ -19,8 +19,8 @@ cleaned_word=`echo $1 | sed -e 's/[åÅ]/\%C3\%A5/g' -e 's/[öÖ]/\%C3\%B6/g' -e
     2>/dev/null
 
 trash ~/Downloads/pronunciation_fi_*.mp3
-curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1/id_lang_speak/46/limit/1/key/$FORVO_API_KEY |
-    jq '.items[0].pathmp3' |
+curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1/id_lang_speak/46/key/$FORVO_API_KEY |
+    jq '[.items[] | select(.code == "fi")] | max_by(.hits) | .pathmp3' |
     xargs -L 1 curl -s --output ~/Downloads/pronunciation_fi_$1.mp3
 
 cat ~/git-repos/lennu/output/$1
