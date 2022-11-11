@@ -46,6 +46,9 @@
     "disabledApps" : {
 
     },
+    "enhancedUI" : {
+      "int" : 1
+    },
     "footprintAlpha" : {
       "float" : 0.30000001192092896
     },
@@ -299,5 +302,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "65"
+  "version" : "67"
 }
