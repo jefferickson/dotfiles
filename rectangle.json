@@ -46,6 +46,9 @@
     "disabledApps" : {
 
     },
+    "dragFromStage" : {
+      "int" : 0
+    },
     "enhancedUI" : {
       "int" : 1
     },
@@ -302,5 +305,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "67"
+  "version" : "69"
 }
