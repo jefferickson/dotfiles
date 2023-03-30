@@ -1,6 +1,7 @@
 [user]
     name = Jeff Erickson
     email = jeff@erick.so
+    signingkey = /Users/jeff/.ssh/id_ed25519.pub
 [core]
     editor = vim
 [diff]
@@ -11,3 +12,7 @@
     branch = false
 [pull]
     ff = only
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
