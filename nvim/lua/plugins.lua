@@ -3,7 +3,7 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
-	use 'jefferickson/ayu-vim'
+	use 'Shatur/neovim-ayu'
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
