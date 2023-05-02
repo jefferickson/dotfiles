@@ -190,6 +190,9 @@
     "todoMode" : {
       "bool" : true
     },
+    "todoSidebarSide" : {
+      "int" : 1
+    },
     "todoSidebarWidth" : {
       "float" : 400
     },
@@ -292,6 +295,10 @@
       "keyCode" : 103,
       "modifierFlags" : 1572864
     },
+    "toggleTodo" : {
+      "keyCode" : 11,
+      "modifierFlags" : 786432
+    },
     "topCenterSixth" : {
       "keyCode" : 115,
       "modifierFlags" : 1310720
@@ -317,5 +324,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "71"
+  "version" : "74"
 }
