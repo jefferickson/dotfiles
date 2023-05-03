@@ -1,6 +1,10 @@
 require('ayu').setup({
 	mirage = true,
-	overrides = {},
+	overrides = {
+        Normal = { bg = '#262626' },
+        Function = { fg = '#FFEF7F' },
+
+    },
 })
 
 require('ayu').colorscheme()
