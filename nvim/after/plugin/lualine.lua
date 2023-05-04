@@ -1,14 +1,14 @@
-local custom_theme = require'lualine.themes.ayu_mirage'
-custom_theme.visual.a.gui = ''
-custom_theme.replace.a.gui = ''
-custom_theme.inactive.a.gui = ''
-custom_theme.normal.a.gui = ''
-custom_theme.insert.a.gui = ''
+local customTheme = require('lualine.themes.wombat')
+customTheme.visual.a.gui = ''
+customTheme.replace.a.gui = ''
+customTheme.inactive.a.gui = ''
+customTheme.normal.a.gui = ''
+customTheme.insert.a.gui = ''
 
 require('lualine').setup {
     options = {
         icons_enabled = false,
-        theme = custom_theme,
+        theme = customTheme,
         component_separators = {},
         section_separators = {},
         always_divide_middle = true,
