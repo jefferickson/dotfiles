@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'airblade/vim-gitgutter'
-    use 'ctrlpvim/ctrlp.vim'
     use 'ibhagwan/fzf-lua'
     use 'mechatroner/rainbow_csv'
     use 'nvim-lualine/lualine.nvim'
