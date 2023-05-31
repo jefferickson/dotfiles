@@ -50886,7 +50886,7 @@
 				<key>editor</key>
 				<string>com.github.atom</string>
 				<key>text</key>
-				<string>echo vim \1 | pbcopy</string>
+				<string>echo nv \1 | pbcopy</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
