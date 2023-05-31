@@ -8,6 +8,7 @@ local customSelection = '#444444'
 local customSelectionBright = '#666666'
 local customGreyWhite = '#CBCCC6'
 local customWhite = '#D9D7CD'
+local diagWarning = '#4D3300'
 
 require('ayu').setup({
     mirage = true,
@@ -35,3 +36,12 @@ require('ayu').setup({
 })
 
 require('ayu').colorscheme()
+
+vim.diagnostic.handlers['my/diagcolumn'] = {
+    show = function()
+        vim.api.nvim_set_hl(0, 'FoldColumn', { bg = diagWarning })
+    end,
+    hide = function()
+        vim.api.nvim_set_hl(0, 'FoldColumn', { bg = customLineNrBg })
+    end,
+}
