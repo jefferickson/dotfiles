@@ -39,9 +39,19 @@ require('ayu').colorscheme()
 
 vim.diagnostic.handlers['my/diagcolumn'] = {
     show = function()
-        vim.api.nvim_set_hl(0, 'FoldColumn', { bg = diagWarning })
+        local nHint = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
+        local nWarn = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
+        local nError = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
+        if nHint + nWarn + nError > 0 then
+            vim.api.nvim_set_hl(0, 'FoldColumn', { bg = diagWarning })
+        end
     end,
     hide = function()
-        vim.api.nvim_set_hl(0, 'FoldColumn', { bg = customLineNrBg })
+        local nHint = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
+        local nWarn = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
+        local nError = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
+        if nHint + nWarn + nError == 0 then
+            vim.api.nvim_set_hl(0, 'FoldColumn', { bg = customLineNrBg })
+        end
     end,
 }
