@@ -26,3 +26,6 @@ cmp.setup({
         ['k'] = cmp.mapping.select_prev_item(cmp_select_opts),
     },
 })
+
+vim.diagnostic.config({ virtual_text = false })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)

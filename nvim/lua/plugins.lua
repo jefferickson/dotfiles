@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         requires = {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
-        }
+        },
     }
 
     use {
@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
-        }
+        },
     }
 
 end)
