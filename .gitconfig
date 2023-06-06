@@ -3,7 +3,7 @@
     email = jeff@erick.so
     signingkey = /Users/jeff/.ssh/id_ed25519.pub
 [core]
-    editor = vim
+    editor = nvim
 [diff]
     tool = vimdiff
 [difftool]

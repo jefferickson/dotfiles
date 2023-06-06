@@ -18,7 +18,7 @@ vim.opt.smartindent = true
 -- undo
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+vim.opt.undodir = os.getenv('HOME') .. '/.nvim/undodir'
 vim.opt.undofile = true
 
 -- search
@@ -30,7 +30,7 @@ vim.opt.smartcase = true
 -- line numbers, visual spacing, and wrapping
 vim.opt.scrolloff = 8
 vim.opt.cmdheight = 2
-vim.opt.foldcolumn = "1"
+vim.opt.foldcolumn = '1'
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
@@ -46,7 +46,7 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
 -- color columns
-local colorcolumns = "79"
+local colorcolumns = '79'
 for i = 119, 250 do
     colorcolumns = colorcolumns .. ',' .. tostring(i)
 end
@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     group = 'settings',
     pattern = '*',
     callback = function()
-        if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line("$") then
+        if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line('$') then
             vim.fn.setpos('.', vim.fn.getpos("'\""))
         end
     end

@@ -46,6 +46,7 @@ vim.diagnostic.handlers['my/diagcolumn'] = {
             vim.api.nvim_set_hl(0, 'FoldColumn', { bg = diagWarning })
         end
     end,
+
     hide = function()
         local nHint = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
         local nWarn = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
