@@ -22,6 +22,7 @@ alias gdsh="git diff --compact-summary HEAD~1"
 alias gdsum="git diff --compact-summary"
 alias gg="lazygit"
 alias hh="lazydocker"
+alias nv="nvim"
 alias swe="~/.swedish-word.sh"
 
 # load z tool
