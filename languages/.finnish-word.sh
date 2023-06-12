@@ -18,6 +18,7 @@ cleaned_word=`echo $1 | sed -e 's/[åÅ]/\%C3\%A5/g' -e 's/[öÖ]/\%C3\%B6/g' -e
     --new-tab "https://kieli.net/sana/$1" \
     --new-tab "https://fi.wiktionary.org/wiki/$cleaned_word#Suomi" \
     --new-tab "http://en.bab.la/dictionary/finnish-english/$cleaned_word" \
+    --new-tab "https://www.sanakirja.org/search.php?q=$1&l=17&l2=3" \
     2>/dev/null
 
 trash ~/Downloads/pronunciation_fi_*.mp3
