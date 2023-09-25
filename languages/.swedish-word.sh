@@ -17,3 +17,8 @@ cleaned_word=`echo $1 | sed -e 's/[åÅ]/\%C3\%A5/g' -e 's/[öÖ]/\%C3\%B6/g' -e
     --new-tab "http://en.bab.la/dictionary/swedish-english/$cleaned_word" \
     --new-tab "https://svenska.se/tre/?sok=$cleaned_word&pz=1" \
     2>/dev/null
+
+trash ~/Downloads/pronunciation_sv_*.mp3
+curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1/id_lang_speak/157/key/$FORVO_API_KEY |
+    jq '[.items[] | select(.code == "sv")] | max_by(.hits) | .pathmp3' |
+    xargs -L 1 curl -s --output ~/Downloads/pronunciation_sv_$1.mp3
