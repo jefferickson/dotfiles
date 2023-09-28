@@ -8,11 +8,12 @@ echo "Søk: $1"
 echo -n $1 | pbcopy
 
 /Applications/Firefox.app/Contents/MacOS/firefox \
+    --new-tab "https://forvo.com/word/$1/#no" \
+    --new-tab "http://en.bab.la/dictionary/norwegian-english/$1" \
     --new-tab "https://ordbokene.no/bm,nn/search?q=$1&scope=ei" \
     --new-tab "https://no.wiktionary.org/wiki/$1#Norsk" \
-    --new-tab "https://forvo.com/word/$1/#no" \
     --new-tab "https://www.google.no/search?sca_esv=568147601&q=$1&tbm=isch" \
-    --new-tab "http://en.bab.la/dictionary/norwegian-english/$1" \
+    --new-tab "https://sv.bab.la/lexikon/norsk-svensk/$1" \
     2>/dev/null
 
 trash ~/Downloads/pronunciation_no_*.mp3
