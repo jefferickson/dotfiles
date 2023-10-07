@@ -63,5 +63,9 @@ if [ -n "$PATH" ]; then
   unset old_PATH x
 fi
 
+# terraform autocomplete
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
 # zsh syntax highlighting (must be at the end of .zshrc)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
