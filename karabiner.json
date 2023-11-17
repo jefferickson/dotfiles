@@ -954,6 +954,26 @@
                             "key_code": "caps_lock"
                         }
                     ]
+                },
+                {
+                    "from": {
+                        "key_code": "left_shift"
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "delete_or_backspace"
+                    },
+                    "to": [
+                        {
+                            "key_code": "vk_none"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
