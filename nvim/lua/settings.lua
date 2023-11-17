@@ -1,6 +1,9 @@
 -- leader key
 vim.g.mapleader = ' '
 
+-- no mouse
+vim.opt.mouse = ''
+
 -- colors
 vim.opt.termguicolors = true
 
