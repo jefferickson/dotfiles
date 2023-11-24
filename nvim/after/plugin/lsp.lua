@@ -1,5 +1,6 @@
 local lsp = require('lsp-zero').preset({})
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 
 lsp.ensure_installed({
@@ -21,7 +22,7 @@ cmp.setup({
     },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<TAB>'] = cmp.mapping.complete(),
+        ['<TAB>'] = cmp_action.luasnip_supertab(),
         ['j'] = cmp.mapping.select_next_item(cmp_select_opts),
         ['k'] = cmp.mapping.select_prev_item(cmp_select_opts),
     },
