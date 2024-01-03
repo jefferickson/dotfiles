@@ -52,6 +52,9 @@
     "doubleClickTitleBar" : {
       "int" : 0
     },
+    "doubleClickTitleBarIgnoredApps" : {
+
+    },
     "doubleClickTitleBarRestore" : {
       "int" : 0
     },
@@ -336,5 +339,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "80"
+  "version" : "81"
 }
