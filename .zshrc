@@ -8,6 +8,9 @@ fi
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
+# brew
+export PATH="/opt/homebrew/bin:$PATH"
+
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 plugins=()
