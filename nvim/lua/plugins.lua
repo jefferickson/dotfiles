@@ -1,7 +1,7 @@
 require('lazy').setup({
 
-    'airblade/vim-gitgutter',
     'ibhagwan/fzf-lua',
+    'lewis6991/gitsigns.nvim',
     'mechatroner/rainbow_csv',
     'nvim-lualine/lualine.nvim',
     'ruanyl/vim-gh-line',
