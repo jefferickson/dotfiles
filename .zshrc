@@ -37,6 +37,11 @@ source ~/.z.sh
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
+# node/npm/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 # Go path
 export GOPATH=$HOME/gowork
 PATH=$PATH:$GOPATH/bin
@@ -47,6 +52,10 @@ eval "$(direnv hook zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='`'
+
+# terraform autocomplete
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # System-specific .zshrc
 source $HOME/.zshrc.specific
@@ -65,10 +74,6 @@ if [ -n "$PATH" ]; then
   PATH=${PATH#:}
   unset old_PATH x
 fi
-
-# terraform autocomplete
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # zsh syntax highlighting (must be at the end of .zshrc)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
