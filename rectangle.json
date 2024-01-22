@@ -95,7 +95,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-
+      "string" : "[1,{\"action\":15},7,{\"compound\":-4},5,{\"compound\":-3},4,{\"compound\":-2},2,{\"action\":2},6,{\"action\":13},3,{\"action\":16},8,{\"action\":14}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -274,6 +274,10 @@
       "keyCode" : 117,
       "modifierFlags" : 1572864
     },
+    "larger" : {
+      "keyCode" : 124,
+      "modifierFlags" : 917504
+    },
     "lastFourth" : {
       "keyCode" : 111,
       "modifierFlags" : 1572864
@@ -298,6 +302,26 @@
       "keyCode" : 3,
       "modifierFlags" : 1572864
     },
+    "maximizeHeight" : {
+      "keyCode" : 126,
+      "modifierFlags" : 917504
+    },
+    "nextDisplay" : {
+      "keyCode" : 124,
+      "modifierFlags" : 1835008
+    },
+    "previousDisplay" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1835008
+    },
+    "reflowTodo" : {
+      "keyCode" : 45,
+      "modifierFlags" : 786432
+    },
+    "restore" : {
+      "keyCode" : 51,
+      "modifierFlags" : 786432
+    },
     "rightHalf" : {
       "keyCode" : 124,
       "modifierFlags" : 1572864
@@ -305,6 +329,10 @@
     "secondFourth" : {
       "keyCode" : 109,
       "modifierFlags" : 1572864
+    },
+    "smaller" : {
+      "keyCode" : 123,
+      "modifierFlags" : 917504
     },
     "thirdFourth" : {
       "keyCode" : 103,
