@@ -16,6 +16,9 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 
+# System-specific .zshrc
+source $HOME/.zshrc.specific
+
 # Aliases
 alias fgg="fg %1"
 alias fggg="fg %2"
@@ -39,8 +42,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # node/npm/nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+# put nvm startup in ~/.zshrc.specific
 
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -78,9 +80,6 @@ export FZF_COMPLETION_TRIGGER='`'
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# System-specific .zshrc
-source $HOME/.zshrc.specific
 
 # Remove duplicate entries from PATH
 if [ -n "$PATH" ]; then
