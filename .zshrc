@@ -8,7 +8,7 @@ fi
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
-# brew
+# brew (arm)
 export PATH="/opt/homebrew/bin:$PATH"
 
 # oh-my-zsh
