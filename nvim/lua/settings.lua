@@ -11,9 +11,7 @@ vim.opt.termguicolors = true
 vim.opt.guicursor = ''
 
 -- tabs and indents
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+-- for tab size, see autocmd at bottom of file
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.smartindent = true
@@ -92,5 +90,22 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         local saveCursor = vim.fn.getpos('.')
         vim.cmd([[ silent! %s/\($\n\s*\)\+\%$// ]])
         vim.fn.setpos('.', saveCursor)
+    end
+})
+
+-- use different tab size for JS
+vim.api.nvim_create_autocmd('FileType', {
+    group = 'settings',
+    pattern = '*',
+    callback = function()
+        if vim.bo.filetype == "javascript" then
+            vim.opt.tabstop = 2
+            vim.opt.softtabstop = 2
+            vim.opt.shiftwidth = 2
+        else
+            vim.opt.tabstop = 4
+            vim.opt.softtabstop = 4
+            vim.opt.shiftwidth = 4
+        end
     end
 })
