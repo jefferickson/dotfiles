@@ -20,6 +20,14 @@ require('mason-lspconfig').setup({
     }
 })
 
+require('lspconfig').tsserver.setup({
+    init_options = {
+        preferences = {
+            disableSuggestions = true,
+        },
+    },
+})
+
 cmp.setup({
     formatting = cmp_format,
     preselect = 'item',
