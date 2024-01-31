@@ -58,11 +58,10 @@ load-nvmrc() {
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
     elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use
+      nvm use --silent
     fi
   elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "NVM: back to default"
-    nvm use default
+    nvm use default --silent
   fi
 }
 add-zsh-hook chpwd load-nvmrc
