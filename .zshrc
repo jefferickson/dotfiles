@@ -34,6 +34,9 @@ alias nor="~/.norwegian-word.sh"
 alias nv="nvim"
 alias rnm="redis-server &; memcached &;"
 alias swe="~/.swedish-word.sh"
+alias te="trans -b en:sv+fi"
+alias tf="trans -b fi:en+sv"
+alias ts="trans -b sv:sv+fi"
 
 # load z tool
 # latest at: https://raw.githubusercontent.com/rupa/z/master/z.sh
