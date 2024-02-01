@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.specific
 
 # Aliases
+alias ag="ag --hidden --ignore .git"
 alias fgg="fg %1"
 alias fggg="fg %2"
 alias fin="~/.finnish-word.sh"
@@ -77,6 +78,14 @@ eval "$(direnv hook zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='`'
+
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
