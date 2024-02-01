@@ -5,4 +5,7 @@ CITY=$(echo "$LOCATION" | jq .city | tr -d '"')
 LON=$(echo "$LOCATION" | jq .lon)
 LAT=$(echo "$LOCATION" | jq .lat)
 
-echo "$CITY ($LAT, $LON)"
+TEMP=$(curl -s "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=$LAT&lon=$LON" |
+    jq '.properties.timeseries[0].data.instant.details.air_temperature')
+
+echo "$CITY [${TEMP}°] ($LAT, $LON)"
