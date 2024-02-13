@@ -1171,6 +1171,26 @@
                                     "key_code": "right_command"
                                 }
                             ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "scroll_lock"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_decrement"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "pause"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_increment"
+                                }
+                            ]
                         }
                     ],
                     "treat_as_built_in_keyboard": false
@@ -1342,16 +1362,6 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_option"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_command"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": [
@@ -1362,11 +1372,21 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
+                                "key_code": "left_option"
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "print_screen"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "mute"
                                 }
                             ]
                         },
@@ -1382,11 +1402,31 @@
                         },
                         {
                             "from": {
-                                "key_code": "print_screen"
+                                "key_code": "right_option"
                             },
                             "to": [
                                 {
-                                    "consumer_key_code": "mute"
+                                    "key_code": "right_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "scroll_lock"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_decrement"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "pause"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_increment"
                                 }
                             ]
                         }
