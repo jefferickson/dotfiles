@@ -130,86 +130,6 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f1"
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "quote",
-                                        "modifiers": [
-                                            "right_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "8",
-                                        "modifiers": [
-                                            "right_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "y"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f2"
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    },
-                                    {
-                                        "key_code": "spacebar"
-                                    },
-                                    {
-                                        "key_code": "p"
-                                    },
-                                    {
-                                        "key_code": "p"
-                                    },
-                                    {
-                                        "key_code": "i"
-                                    },
-                                    {
-                                        "key_code": "v",
-                                        "modifiers": [
-                                            "left_gui"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "escape"
-                                    },
-                                    {
-                                        "key_code": "spacebar"
-                                    },
-                                    {
-                                        "key_code": "p"
-                                    },
-                                    {
-                                        "key_code": "p"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
                                     "key_code": "1",
                                     "modifiers": {
                                         "mandatory": [
@@ -1144,6 +1064,16 @@
                         },
                         {
                             "from": {
+                                "key_code": "pause"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_increment"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "print_screen"
                             },
                             "to": [
@@ -1179,16 +1109,6 @@
                             "to": [
                                 {
                                     "consumer_key_code": "volume_decrement"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "pause"
-                            },
-                            "to": [
-                                {
-                                    "consumer_key_code": "volume_increment"
                                 }
                             ]
                         }
@@ -1382,6 +1302,16 @@
                         },
                         {
                             "from": {
+                                "key_code": "pause"
+                            },
+                            "to": [
+                                {
+                                    "consumer_key_code": "volume_increment"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "print_screen"
                             },
                             "to": [
@@ -1419,16 +1349,6 @@
                                     "consumer_key_code": "volume_decrement"
                                 }
                             ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "pause"
-                            },
-                            "to": [
-                                {
-                                    "consumer_key_code": "volume_increment"
-                                }
-                            ]
                         }
                     ],
                     "treat_as_built_in_keyboard": false
@@ -1461,7 +1381,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "mission_control"
+                            "key_code": "f3"
                         }
                     ]
                 },
@@ -1471,7 +1391,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "spotlight"
+                            "key_code": "f4"
                         }
                     ]
                 },
