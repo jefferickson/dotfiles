@@ -11,6 +11,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '∆', '<C-e>')
 vim.keymap.set('n', '˚', '<C-y>')
 vim.keymap.set('n', '0', '^')
+vim.keymap.set('n', '^', '0')
 
 -- easily turn off search highlighting
 vim.keymap.set('n', '<leader><cr>', ':noh<cr>')
