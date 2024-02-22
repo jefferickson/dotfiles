@@ -8,6 +8,7 @@ require('lazy').setup({
     'Shatur/neovim-ayu',
     'terryma/vim-expand-region',
     'tpope/vim-commentary',
+    'wellle/context.vim',
 
     {
         'iamcco/markdown-preview.nvim',
