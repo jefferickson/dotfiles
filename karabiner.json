@@ -112,10 +112,10 @@
                                 },
                                 "to_if_alone": [
                                     {
-                                        "key_code": "z"
-                                    },
-                                    {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
