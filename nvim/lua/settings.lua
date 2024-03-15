@@ -93,12 +93,14 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
 })
 
--- use different tab size for JS
+-- use different tab size for JS, Typescript
 vim.api.nvim_create_autocmd('FileType', {
     group = 'settings',
     pattern = '*',
     callback = function()
-        if vim.bo.filetype == "javascript" then
+        if vim.bo.filetype == "javascript" or
+           vim.bo.filetype == "typescript"
+        then
             vim.opt.tabstop = 2
             vim.opt.softtabstop = 2
             vim.opt.shiftwidth = 2
