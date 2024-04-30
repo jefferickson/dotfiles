@@ -85,6 +85,9 @@
     "gapSize" : {
       "float" : 0
     },
+    "hapticFeedbackOnSnap" : {
+      "int" : 0
+    },
     "hideMenubarIcon" : {
       "bool" : false
     },
@@ -342,5 +345,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "82"
+  "version" : "83"
 }
