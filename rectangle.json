@@ -46,6 +46,9 @@
     "curtainChangeSize" : {
       "int" : 0
     },
+    "cycleSizesIsChanged" : {
+      "bool" : false
+    },
     "disabledApps" : {
 
     },
@@ -153,6 +156,12 @@
     },
     "screenEdgeGapTop" : {
       "float" : 0
+    },
+    "screenEdgeGapTopNotch" : {
+      "float" : 0
+    },
+    "selectedCycleSizes" : {
+      "int" : 0
     },
     "shortEdgeSnapAreaSize" : {
       "float" : 145
@@ -345,5 +354,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "83"
+  "version" : "88"
 }
