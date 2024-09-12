@@ -10,7 +10,12 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {},
+    ensure_installed = { 'lua_ls', 'ruff', 'ts_ls', 'bashls', 'tailwindcss',
+        'dockerls', 'elixirls', 'elmls', 'gopls', 'html', 'jsonls', 'marksman',
+        'r_language_server', 'rust_analyzer', 'sqls', 'tflint', 'vimls',
+        'yamlls',
+    },
+
     handlers = {
         lsp.default_setup,
         lua_ls = function()
