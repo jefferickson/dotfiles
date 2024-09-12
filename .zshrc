@@ -24,9 +24,10 @@ alias ag="ag --hidden --ignore .git"
 alias fgg="fg %1"
 alias fggg="fg %2"
 alias fin="~/.finnish-word.sh"
+alias gd="git diff"
 alias gdh="git diff HEAD~1"
+alias gds="git diff --compact-summary"
 alias gdsh="git diff --compact-summary HEAD~1"
-alias gdsum="git diff --compact-summary"
 alias gg="lazygit"
 alias hh="lazydocker"
 alias nor="~/.norwegian-word.sh"
@@ -89,6 +90,7 @@ _fzf_compgen_dir() {
 
 # zsh autocomplete
 setopt MENU_COMPLETE
+bindkey -M menuselect '^[' undo
 
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
