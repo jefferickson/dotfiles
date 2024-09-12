@@ -8,7 +8,7 @@ fi
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
-# brew (arm)
+# brew
 export PATH="/opt/homebrew/bin:$PATH"
 
 # oh-my-zsh
@@ -29,10 +29,7 @@ alias gdsh="git diff --compact-summary HEAD~1"
 alias gdsum="git diff --compact-summary"
 alias gg="lazygit"
 alias hh="lazydocker"
-alias killrnm="redis-cli shutdown; ps -ef | grep memcache | grep -v \"grep\" | awk '{print \$2}' | xargs kill;"
 alias nor="~/.norwegian-word.sh"
-alias nv="nvim"
-alias rnm="redis-server &; memcached &;"
 alias swe="~/.swedish-word.sh"
 alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
