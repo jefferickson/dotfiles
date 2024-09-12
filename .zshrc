@@ -16,6 +16,9 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 
+# zsh vi mode
+bindkey -v
+
 # System-specific .zshrc
 source $HOME/.zshrc.specific
 
@@ -92,9 +95,6 @@ _fzf_compgen_dir() {
 # zsh autocomplete
 setopt MENU_COMPLETE
 bindkey -M menuselect '^[' undo
-
-# zsh vi mode
-bindkey -v
 
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
