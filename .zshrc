@@ -32,6 +32,7 @@ alias gl="git log"
 alias gg="lazygit"
 alias hh="lazydocker"
 alias nor="~/.norwegian-word.sh"
+alias sso="aws sso login"
 alias swe="~/.swedish-word.sh"
 alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
@@ -46,7 +47,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # node/npm/nvm
-export NVM_DIR="$HOME/.nvm"
 # put nvm startup in ~/.zshrc.specific
 
 autoload -U add-zsh-hook
