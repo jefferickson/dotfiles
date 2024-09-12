@@ -93,6 +93,9 @@ _fzf_compgen_dir() {
 setopt MENU_COMPLETE
 bindkey -M menuselect '^[' undo
 
+# zsh vi mode
+bindkey -v
+
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
