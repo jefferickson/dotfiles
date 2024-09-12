@@ -20,7 +20,7 @@ require('mason-lspconfig').setup({
     }
 })
 
-require('lspconfig').tsserver.setup({
+require('lspconfig').ts_ls.setup({
     init_options = {
         preferences = {
             disableSuggestions = true,
