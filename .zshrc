@@ -97,6 +97,7 @@ _fzf_compgen_dir() {
 # zsh autocomplete
 setopt MENU_COMPLETE
 bindkey -M menuselect '^[' undo
+bindkey '\e.' insert-last-word
 
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
