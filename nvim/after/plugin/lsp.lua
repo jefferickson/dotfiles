@@ -10,7 +10,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'ruff', 'ts_ls', 'bashls', 'tailwindcss',
+    ensure_installed = { 'lua_ls', 'pyright', 'ts_ls', 'bashls', 'tailwindcss',
         'dockerls', 'elixirls', 'elmls', 'gopls', 'html', 'jsonls', 'marksman',
         'r_language_server', 'rust_analyzer', 'sqls', 'tflint', 'vimls',
         'yamlls',
@@ -49,4 +49,8 @@ cmp.setup({
 })
 
 vim.diagnostic.config({ virtual_text = false })
+
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>a', '<cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k', { silent = true })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR> <cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k k', { silent = true })
+vim.keymap.set('n', '<leader>o', '<cmd>on<CR>', { silent = true })
