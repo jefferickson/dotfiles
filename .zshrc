@@ -24,6 +24,7 @@ source $HOME/.zshrc.specific
 
 # Aliases
 alias ag="ag --hidden --ignore .git"
+alias qag="ag -Q --hidden --ignore .git"
 alias fgg="fg %1"
 alias fggg="fg %2"
 alias fin="~/.finnish-word.sh"
