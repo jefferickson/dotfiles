@@ -19,6 +19,9 @@ source $ZSH/oh-my-zsh.sh
 # zsh vi mode
 bindkey -v
 
+# Git
+export GITHOME="$HOME/git-repos"
+
 # System-specific .zshrc
 source $HOME/.zshrc.specific
 
