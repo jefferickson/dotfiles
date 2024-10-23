@@ -57,6 +57,10 @@ vim.opt.colorcolumn = colorcolumns
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+-- location to pynvim
+-- see :help g:python3_host_prog
+vim.g.python3_host_prog = vim.fn.expand('$HOME/.pyenv/versions/py3nvim/bin/python')
+
 -- return to last edit position on reopen
 vim.api.nvim_create_augroup('settings', { clear = true })
 vim.api.nvim_create_autocmd('BufReadPost', {
@@ -99,7 +103,7 @@ vim.api.nvim_create_autocmd('FileType', {
     pattern = '*',
     callback = function()
         if vim.bo.filetype == "javascript" or
-           vim.bo.filetype == "typescript"
+            vim.bo.filetype == "typescript"
         then
             vim.opt.tabstop = 2
             vim.opt.softtabstop = 2
