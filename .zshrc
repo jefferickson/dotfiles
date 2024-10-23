@@ -10,6 +10,7 @@ source ~/.p10k.zsh
 
 # brew
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"  # pipx et al
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
