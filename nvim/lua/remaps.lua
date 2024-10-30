@@ -12,8 +12,10 @@ vim.keymap.set('n', '<C-j>', '<C-e>')
 vim.keymap.set('n', '<C-k>', '<C-y>')
 vim.keymap.set('i', '<C-j>', '<esc><C-e>li')
 vim.keymap.set('i', '<C-k>', '<esc><C-y>li')
-vim.keymap.set('n', '0', '^')
+vim.keymap.set('n', '0', '0^')
 vim.keymap.set('n', '^', '0')
+vim.keymap.set('n', 'gg', 'gg0^')
+vim.keymap.set('n', 'G', 'G0^')
 
 -- easily turn off search highlighting
 vim.keymap.set('n', '<leader><cr>', ':noh<cr>')
