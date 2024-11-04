@@ -27,11 +27,14 @@ export GITHOME="$HOME/git-repos"
 source $HOME/.zshrc.specific
 
 # Aliases
+# ag specific:
 alias ag="ag --hidden --ignore .git"
 alias cag="ag -A 5 -B 5"
 alias qag="ag -Q"
 alias cqag="cag -Q"
 alias qcag="cqag"
+# others
+alias fd="fd --no-ignore-vcs"
 alias fgg="fg %1"
 alias fggg="fg %2"
 alias fin="~/.finnish-word.sh"
