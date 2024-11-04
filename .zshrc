@@ -34,7 +34,7 @@ alias qag="ag -Q"
 alias cqag="cag -Q"
 alias qcag="cqag"
 # others
-alias fd="fd --no-ignore-vcs"
+alias fd="fd --no-ignore-vcs --hidden --exclude .git --exclude cdk.out --exclude \"**cache**\" --exclude .venv"
 alias fgg="fg %1"
 alias fggg="fg %2"
 alias fin="~/.finnish-word.sh"
