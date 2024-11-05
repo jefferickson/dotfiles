@@ -31,5 +31,10 @@ vim.keymap.set('n', '<Right>', ':bnext<cr>')
 vim.keymap.set('n', '<PageUp>', '<C-u>zz')
 vim.keymap.set('n', '<PageDown>', '<C-d>zz')
 
+-- better integration with karabiner mods
+-- shift becomes z<cr>
+vim.keymap.set('n', '<C-r>', 'z<cr>')
+vim.keymap.set('n', '<leader>r', '<C-r>')
+
 -- fzf fuzzy find files
 vim.keymap.set('n', '<leader>f', '<cmd>lua require("fzf-lua").git_files()<CR>', { silent = true })
