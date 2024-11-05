@@ -10,6 +10,9 @@ local customGreyWhite = '#CBCCC6'
 local customWhite = '#D9D7CD'
 local diagWarning = '#4D3300'
 
+local colors = require('ayu.colors')
+colors.generate(true)
+
 require('ayu').setup({
     mirage = true,
     overrides = {
@@ -18,6 +21,7 @@ require('ayu').setup({
         CursorLine = { bg = customColumn },
         CursorLineNr = { fg = accent, bg = customColumn },
         FoldColumn = { bg = customLineNrBg },
+        IncSearch = { fg = colors.bg, bg = colors.special },
         LineNr = { fg = customLineNrFg, bg = customLineNrBg },
         Normal = { bg = customBg },
         SignColumn = { bg = customBg },
