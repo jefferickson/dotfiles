@@ -94,7 +94,7 @@ PATH=$PATH:$GOPATH/bin
 eval "$(direnv hook zsh)"
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 export FZF_COMPLETION_TRIGGER='`'
 
 _fzf_compgen_path() {
