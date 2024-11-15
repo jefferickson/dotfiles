@@ -96,8 +96,6 @@ eval "$(direnv hook zsh)"
 # fzf
 source <(fzf --zsh)
 export FZF_COMPLETION_TRIGGER='`'
-# until this is resolved: https://github.com/junegunn/fzf/pull/4090:
-source <(curl -fsSL https://raw.githubusercontent.com/LangLangBart/fzf/refs/heads/zsh_backtick/shell/completion.zsh)
 
 _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "$1"
