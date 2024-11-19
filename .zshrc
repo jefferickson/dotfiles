@@ -28,7 +28,7 @@ source $HOME/.zshrc.specific
 
 # Aliases
 # ag specific:
-alias ag="ag --hidden --ignore .git"
+alias ag="ag --hidden --ignore .git --ignore cdk.out"
 alias cag="ag -A 5 -B 5"
 alias qag="ag -Q"
 alias cqag="cag -Q"
