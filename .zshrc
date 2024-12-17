@@ -28,7 +28,7 @@ source $HOME/.zshrc.specific
 
 # Aliases
 # ag specific:
-alias ag="ag --hidden --ignore .git --ignore cdk.out"
+alias ag="ag --hidden --ignore .git --ignore .venv --ignore cdk.out --ignore \"**pycache**\""
 alias cag="ag -A 5 -B 5"
 alias qag="ag -Q"
 alias cqag="cag -Q"
