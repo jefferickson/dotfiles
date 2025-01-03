@@ -110,9 +110,6 @@ setopt MENU_COMPLETE
 bindkey -M menuselect '^[' undo
 bindkey '\e.' insert-last-word
 
-# zsh shared history off
-unsetopt share_history
-
 # terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
