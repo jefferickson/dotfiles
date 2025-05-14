@@ -27,3 +27,6 @@ curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1
     xargs -L 1 curl -s --output ~/Downloads/pronunciation_fi_$1.mp3
 
 cat ~/git-repos/lennu/output/$1
+
+echo "==="
+trans -b fi:en+sv $1
