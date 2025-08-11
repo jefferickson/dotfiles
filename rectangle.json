@@ -163,6 +163,9 @@
     "screenEdgeGapsOnMainScreenOnly" : {
       "bool" : false
     },
+    "screensOrderedByX" : {
+      "int" : 0
+    },
     "selectedCycleSizes" : {
       "int" : 0
     },
@@ -354,5 +357,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "94"
+  "version" : "95"
 }
