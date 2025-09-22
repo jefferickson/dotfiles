@@ -20,12 +20,12 @@ require('mason-lspconfig').setup({
         lsp.default_setup,
         lua_ls = function()
             local lua_opts = lsp.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
+            vim.lsp.config('lua_ls', lua_opts)
         end,
     }
 })
 
-require('lspconfig').ts_ls.setup({
+vim.lsp.config('ts_ls', {
     init_options = {
         preferences = {
             disableSuggestions = true,
