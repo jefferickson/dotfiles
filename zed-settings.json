@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "disable_ai": true,
   "theme": "Ayu Mirage",
   "vim_mode": true,
   "telemetry": {
