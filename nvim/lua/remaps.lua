@@ -14,6 +14,7 @@ vim.keymap.set('n', 'G', 'G0^')
 vim.keymap.set('n', '<TAB>', '<C-w>w')
 vim.keymap.set('n', '{', ':<C-u>execute "keepjumps norm! " . v:count1 . "{"<CR>', { silent = true })
 vim.keymap.set('n', '}', ':<C-u>execute "keepjumps norm! " . v:count1 . "}"<CR>', { silent = true })
+vim.keymap.set('i', '<C-space>', '<esc>ddkA')
 
 -- better file navigation
 vim.keymap.set('n', '<Up>', '<C-o>')
