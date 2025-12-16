@@ -50186,6 +50186,8 @@
 	<dict/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -50811,6 +50813,8 @@
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
+	<key>UseBorder</key>
+	<false/>
 	<key>UseRecommendedAIModel</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
