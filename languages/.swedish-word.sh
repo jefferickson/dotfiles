@@ -23,4 +23,19 @@ curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1
     jq '[.items[] | select(.code == "sv")] | max_by(.hits) | .pathmp3' |
     xargs -L 1 curl -s --output ~/Downloads/pronunciation_sv_$1.mp3
 
+trash ~/Downloads/speechify_sv_*.mp3
+curl -s -X POST https://api.sws.speechify.com/v1/audio/speech \
+     -H "Authorization: Bearer $SPEECHIFY_API_KEY" \
+     -H "Content-Type: application/json" \
+     -d "{
+  \"input\": \"$1\",
+  \"voice_id\": \"asa\",
+  \"audio_format\": \"mp3\",
+  \"language\": \"sv-SE\",
+  \"model\": \"simba-multilingual\"
+}" |
+jq '.audio_data' |
+tr -d '"' |
+base64 --decode > ~/Downloads/speechify_sv_$1.mp3
+
 trans -b sv:en+fi $1
