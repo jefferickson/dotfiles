@@ -20,7 +20,7 @@
     "copilot": false
   },
   "restore_on_startup": "none",
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "vim": {
     "use_smartcase_find": true
   }
