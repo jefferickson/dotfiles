@@ -50,9 +50,8 @@ alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
 alias ts="trans -b sv:sv+fi"
 
-# load z tool
-# latest at: https://raw.githubusercontent.com/rupa/z/master/z.sh
-source ~/.z.sh
+# zoxide
+eval "$(zoxide init zsh)"
 
 # pyenv-virtualenv
 eval "$(pyenv init --path)"
