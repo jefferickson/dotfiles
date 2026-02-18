@@ -50,9 +50,6 @@ alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
 alias ts="trans -b sv:sv+fi"
 
-# zoxide
-eval "$(zoxide init zsh)"
-
 # pyenv-virtualenv
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
@@ -95,6 +92,9 @@ if [ -n "$PATH" ]; then
   PATH=${PATH#:}
   unset old_PATH x
 fi
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # zsh syntax highlighting (must be at the end of .zshrc)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
