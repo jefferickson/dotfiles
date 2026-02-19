@@ -20,9 +20,6 @@ bindkey -v
 # Git
 export GITHOME="$HOME/git-repos"
 
-# System-specific .zshrc
-source $HOME/.zshrc.specific
-
 # Aliases
 # ag specific:
 alias ag="ag --hidden --ignore .git --ignore .venv --ignore cdk.out --ignore \"**pycache**\""
@@ -49,6 +46,11 @@ alias swe="~/.swedish-word.sh"
 alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
 alias ts="trans -b sv:sv+fi"
+
+# named dirs
+hash -d git=$GITHOME
+hash -d dl=~/Downloads
+hash -d dot=~git/dotfiles
 
 # pyenv-virtualenv
 eval "$(pyenv init --path)"
@@ -92,6 +94,9 @@ if [ -n "$PATH" ]; then
   PATH=${PATH#:}
   unset old_PATH x
 fi
+
+# System-specific .zshrc
+source $HOME/.zshrc.specific
 
 # zoxide
 eval "$(zoxide init zsh)"
