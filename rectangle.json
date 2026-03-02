@@ -97,6 +97,9 @@
     "hideMenubarIcon" : {
       "bool" : true
     },
+    "horizontalSplitRatio" : {
+      "float" : 50
+    },
     "ignoreDragSnapToo" : {
       "int" : 0
     },
@@ -175,6 +178,9 @@
     "showAllActionsInMenu" : {
       "int" : 0
     },
+    "showEighthsInMenu" : {
+      "int" : 0
+    },
     "sixthsSnapArea" : {
       "int" : 0
     },
@@ -234,6 +240,9 @@
     },
     "unsnapRestore" : {
       "int" : 2
+    },
+    "verticalSplitRatio" : {
+      "float" : 50
     },
     "widthStepSize" : {
       "float" : 30
@@ -360,5 +369,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "99"
+  "version" : "100"
 }
