@@ -175,10 +175,10 @@
     "shortEdgeSnapAreaSize" : {
       "float" : 145
     },
-    "showAllActionsInMenu" : {
+    "showAdditionalSizesInMenu" : {
       "int" : 0
     },
-    "showEighthsInMenu" : {
+    "showAllActionsInMenu" : {
       "int" : 0
     },
     "sixthsSnapArea" : {
@@ -369,5 +369,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "100"
+  "version" : "101"
 }
