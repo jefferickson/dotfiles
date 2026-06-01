@@ -1,4 +1,5 @@
 {
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left"
   },
@@ -9,6 +10,7 @@
     "dock": "left"
   },
   "agent": {
+    "enable_feedback": false,
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
