@@ -43,6 +43,12 @@
     "centeredDirectionalMove" : {
       "int" : 0
     },
+    "cooperativeCornerResize" : {
+      "bool" : false
+    },
+    "cornerCycleExpansionAxis" : {
+      "int" : 0
+    },
     "cornerSnapAreaSize" : {
       "float" : 20
     },
@@ -100,6 +106,9 @@
     "gapSize" : {
       "float" : 0
     },
+    "greenButtonOverride" : {
+      "bool" : false
+    },
     "hapticFeedbackOnSnap" : {
       "int" : 0
     },
@@ -143,7 +152,7 @@
       "int" : 0
     },
     "moveFixedSizeToEdge" : {
-      "int" : 0
+      "int" : 1
     },
     "notifiedOfProblemApps" : {
       "bool" : false
@@ -179,7 +188,7 @@
       "bool" : false
     },
     "screensOrderedByX" : {
-      "int" : 0
+      "int" : 3
     },
     "selectedCycleSizes" : {
       "int" : 0
@@ -198,6 +207,9 @@
     },
     "sizeOffset" : {
       "float" : 0
+    },
+    "skipGapTopEdge" : {
+      "bool" : false
     },
     "snapEdgeMarginBottom" : {
       "float" : 5
@@ -381,5 +393,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "102"
+  "version" : "104"
 }
