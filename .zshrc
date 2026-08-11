@@ -21,12 +21,12 @@ bindkey -v
 export GITHOME="$HOME/git-repos"
 
 # Aliases
-# ag specific:
-alias ag="ag --hidden --ignore .git --ignore .venv --ignore cdk.out --ignore \"**pycache**\""
-alias cag="ag -A 5 -B 5"
-alias qag="ag -Q"
-alias cqag="cag -Q"
-alias qcag="cqag"
+# rg specific:
+alias rg="rg --smart-case --hidden --glob '!.git' --glob '!.venv' --glob '!cdk.out' --glob '!**pycache**'"
+alias crg="rg -A 5 -B 5"
+alias qrg="rg -F"
+alias cqrg="crg -F"
+alias qcrg="cqrg"
 # others
 alias fd="fd --no-ignore-vcs --hidden --exclude .git --exclude cdk.out --exclude \"**pycache**\" --exclude .venv --exclude \"**mypy_cache**\""
 alias fgg="fg %1"
