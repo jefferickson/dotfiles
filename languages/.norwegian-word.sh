@@ -30,7 +30,7 @@ curl -s -X POST https://api.sws.speechify.com/v1/audio/speech \
   \"voice_id\": \"martine\",
   \"audio_format\": \"mp3\",
   \"language\": \"nb-NO\",
-  \"model\": \"simba-multilingual\"
+  \"model\": \"simba-3.0\"
 }" |
 jq '.audio_data' |
 tr -d '"' |

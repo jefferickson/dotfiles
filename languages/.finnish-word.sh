@@ -35,7 +35,7 @@ curl -s -X POST https://api.sws.speechify.com/v1/audio/speech \
   \"voice_id\": \"helmi\",
   \"audio_format\": \"mp3\",
   \"language\": \"fi-FI\",
-  \"model\": \"simba-multilingual\"
+  \"model\": \"simba-3.0\"
 }" |
 jq '.audio_data' |
 tr -d '"' |

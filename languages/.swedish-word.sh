@@ -33,7 +33,7 @@ curl -s -X POST https://api.sws.speechify.com/v1/audio/speech \
   \"voice_id\": \"asa\",
   \"audio_format\": \"mp3\",
   \"language\": \"sv-SE\",
-  \"model\": \"simba-multilingual\"
+  \"model\": \"simba-3.0\"
 }" |
 jq '.audio_data' |
 tr -d '"' |
