@@ -34,8 +34,14 @@
     "autoMaximize" : {
       "int" : 0
     },
+    "blurAppearance" : {
+      "int" : 0
+    },
     "cascadeAllDeltaSize" : {
       "float" : 30
+    },
+    "centerAcrossDisplays" : {
+      "int" : 0
     },
     "centerHalfCycles" : {
       "int" : 0
@@ -67,6 +73,9 @@
     "cyclingOverlapOffsetSize" : {
       "float" : 11
     },
+    "directAnimationNativeResizeApps" : {
+
+    },
     "disabledApps" : {
 
     },
@@ -83,13 +92,19 @@
       "int" : 0
     },
     "enhancedUI" : {
-      "int" : 1
+      "int" : 4
+    },
+    "experimentalWindowAnimations" : {
+      "bool" : false
     },
     "footprintAlpha" : {
-      "float" : 0.3
+      "double" : 0.30000001192092896
     },
     "footprintAnimationDurationMultiplier" : {
       "float" : 0
+    },
+    "footprintBlur" : {
+      "bool" : false
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -109,8 +124,11 @@
     "greenButtonOverride" : {
       "bool" : false
     },
+    "halvesPreserveOtherAxisSize" : {
+      "bool" : false
+    },
     "hapticFeedbackOnSnap" : {
-      "int" : 0
+      "int" : 2
     },
     "hideMenubarIcon" : {
       "bool" : true
@@ -125,7 +143,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-
+      "string" : "[8,{\"action\":14},4,{\"compound\":-2},6,{\"action\":13},3,{\"action\":16},1,{\"action\":15},2,{\"action\":2},5,{\"compound\":-3},7,{\"compound\":-4}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -137,7 +155,7 @@
       "double" : 0
     },
     "missionControlDragging" : {
-      "int" : 0
+      "int" : 1
     },
     "missionControlDraggingAllowedOffscreenDistance" : {
       "float" : 25
@@ -164,6 +182,9 @@
 
     },
     "relaunchOpensMenu" : {
+      "bool" : false
+    },
+    "repeatedMaximizeRestoresPrevious" : {
       "bool" : false
     },
     "resizeOnDirectionalMove" : {
@@ -249,6 +270,12 @@
     },
     "systemWideMouseDownApps" : {
 
+    },
+    "tileColumnsMaxWindows" : {
+      "int" : 3
+    },
+    "tileRowsMaxWindows" : {
+      "int" : 3
     },
     "todo" : {
       "int" : 2
@@ -402,5 +429,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "106"
+  "version" : "109"
 }
