@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node /root/.pi/agent/extensions/readonly-git/hook.ts",
+        "timeout": 30,
+        "failClosed": true
+      }
+    ]
+  }
+}

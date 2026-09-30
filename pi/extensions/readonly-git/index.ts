@@ -4,6 +4,11 @@
  *
  * Shell commands are checked before they start. A PATH shim also checks every
  * later `git` lookup, including git started from scripts.
+ *
+ * This covers pi's own tools only. With the `cursor` provider (pi-cursor-sdk),
+ * the Cursor SDK agent runs its own Shell tool in a separate process, so pi's
+ * `tool_call` handler never sees those commands. `hook.ts` plus a Cursor
+ * `beforeShellExecution` hook (see ../../cursor/hooks.json) covers that path.
  */
 import { spawnSync as nodeSpawnSync } from "node:child_process";
 import { createRequire } from "node:module";
