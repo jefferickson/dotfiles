@@ -259,6 +259,9 @@
     "stackBadge" : {
       "int" : 0
     },
+    "stackSameSizeOnly" : {
+      "int" : 0
+    },
     "stageSize" : {
       "float" : 190
     },
@@ -429,5 +432,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "109"
+  "version" : "110"
 }
