@@ -128,7 +128,7 @@
       "bool" : false
     },
     "hapticFeedbackOnSnap" : {
-      "int" : 2
+      "int" : 0
     },
     "hideMenubarIcon" : {
       "bool" : true
@@ -143,7 +143,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-      "string" : "[8,{\"action\":14},4,{\"compound\":-2},6,{\"action\":13},3,{\"action\":16},1,{\"action\":15},2,{\"action\":2},5,{\"compound\":-3},7,{\"compound\":-4}]"
+
     },
     "launchOnLogin" : {
       "bool" : true
@@ -155,7 +155,7 @@
       "double" : 0
     },
     "missionControlDragging" : {
-      "int" : 1
+      "int" : 0
     },
     "missionControlDraggingAllowedOffscreenDistance" : {
       "float" : 25
