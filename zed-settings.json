@@ -1,7 +1,8 @@
 {
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left"
+    "dock": "right",
+    "hide_hidden": false
   },
   "outline_panel": {
     "dock": "left"
@@ -20,6 +21,75 @@
   },
   "disable_ai": true,
   "theme": "Ayu Mirage",
+  "theme_overrides": {
+    "Ayu Mirage": {
+      "editor.background": "#262626",
+      "editor.gutter.background": "#1f1f1f",
+      "editor.active_line.background": "#303030",
+      "editor.highlighted_line.background": "#303030",
+      "editor.line_number": "#4d4d4d",
+      "editor.active_line_number": "#ffcc66",
+      "editor.wrap_guide": "#303030",
+      "editor.active_wrap_guide": "#303030",
+      "tab_bar.background": "#444444",
+      "tab.inactive_background": "#444444",
+      "tab.active_background": "#666666",
+      "search.active_match_background": "#ffcc66",
+      "players": [
+        {
+          "cursor": "#72cffeff",
+          "background": "#72cffeff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#5bcde5ff",
+          "background": "#5bcde5ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#fead66ff",
+          "background": "#fead66ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#debffeff",
+          "background": "#debffeff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#95e5cbff",
+          "background": "#95e5cbff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#f18779ff",
+          "background": "#f18779ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#fecf72ff",
+          "background": "#fecf72ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#d5fe80ff",
+          "background": "#d5fe80ff",
+          "selection": "#444444ff"
+        }
+      ],
+      "syntax": {
+        "function": {
+          "color": "#ffef7f"
+        },
+        "namespace": {
+          "color": "#ffef7f"
+        },
+        "variable": {
+          "color": "#d9d7cd"
+        }
+      }
+    }
+  },
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
@@ -31,7 +101,84 @@
     "copilot": false
   },
   "restore_on_startup": "none",
+  "restore_on_file_reopen": true,
   "relative_line_numbers": "enabled",
+  "cursor_shape": "block",
+  "current_line_highlight": "all",
+  "vertical_scroll_margin": 8,
+  "soft_wrap": "none",
+  "show_wrap_guides": true,
+  "preferred_line_length": 79,
+  "wrap_guides": [79, 119],
+  "hard_tabs": false,
+  "tab_size": 4,
+  "tab_bar": {
+    "show": true
+  },
+  "pane_split_direction_vertical": "right",
+  "pane_split_direction_horizontal": "down",
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "show_completions_on_input": false,
+  "use_smartcase_search": true,
+  "search": {
+    "center_on_match": true
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "gutter": {
+    "line_numbers": true,
+    "folds": true
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": false
+    }
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "status_bar": {
+    "show_active_file": true,
+    "active_language_button": true,
+    "cursor_position_button": true,
+    "line_endings_button": true,
+    "active_encoding_button": "enabled"
+  },
+  "languages": {
+    "JavaScript": {
+      "tab_size": 2
+    },
+    "TypeScript": {
+      "tab_size": 2
+    }
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "javascript": {
+          "suggest": {
+            "enabled": false
+          }
+        },
+        "typescript": {
+          "suggest": {
+            "enabled": false
+          }
+        }
+      }
+    }
+  },
+  "command_aliases": {
+    "GH": "git::OpenFilePermalink",
+    "MarkdownPreview": "markdown::OpenPreview",
+    "MarkdownPreviewToggle": "markdown::OpenPreview",
+    "only": "workspace::CloseInactiveTabsAndPanes"
+  },
   "vim": {
     "use_smartcase_find": true
   }

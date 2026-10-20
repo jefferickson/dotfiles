@@ -1,0 +1,100 @@
+// Ports of nvim/lua/remaps.lua and the leader maps in nvim/after/plugin/lsp.lua.
+// Leader is space, which is Zed's vim default. Sequences that resend their own
+// key use the built-in binding, then add the extra motion.
+[
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // <C-d>/<C-u> then center. n/N center on the match (zv has no Zed equivalent).
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "n": ["workspace::SendKeystrokes", "n z z"],
+      "shift-n": ["workspace::SendKeystrokes", "shift-n z z"],
+
+      // Scroll the view without moving the cursor. Replaces cursor-down/up on ctrl-j/k.
+      "ctrl-j": "vim::LineDown",
+      "ctrl-k": "vim::LineUp",
+
+      // 0 and ^ are swapped. 0 is excluded while a count is being typed.
+      "^": "vim::StartOfLine",
+      "g g": ["workspace::SendKeystrokes", "g g 0"],
+      "shift-g": ["workspace::SendKeystrokes", "shift-g 0"],
+
+      // Next editor pane. Same idea as <C-w>w.
+      "tab": "workspace::ActivateNextPane",
+
+      // Jump list, buffer list, and half-page scroll on the navigation keys.
+      "up": "pane::GoBack",
+      "down": "pane::GoForward",
+      "left": "pane::ActivatePreviousItem",
+      "right": "pane::ActivateNextItem",
+      "pageup": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "pagedown": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "shift-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "shift-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+
+      // Karabiner sends ctrl-r for the "put this line at the top" chord.
+      // space r is the real redo.
+      "ctrl-r": ["workspace::SendKeystrokes", "z t 0"],
+
+      // :noh
+      "space enter": "editor::Cancel",
+
+      // fzf git_files. Zed's finder is project files, so ignored files stay out
+      // and untracked files still appear.
+      "space f": "file_finder::Toggle",
+
+      // vim-gh-line <leader>gh
+      "space g h": "git::OpenFilePermalink",
+
+      // Diagnostic float, diagnostics list, save, :only
+      "space e": "editor::Hover",
+      "space a": "diagnostics::Deploy",
+      "space w": "workspace::Save",
+      "space o": "workspace::CloseInactiveTabsAndPanes",
+      "space r": "vim::Redo"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu && !VimCount",
+    "bindings": {
+      "0": "vim::FirstNonWhitespace"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-j": "vim::LineDown",
+      "ctrl-k": "vim::LineUp",
+      // <esc>ddkA: delete this line and keep typing at the end of the previous one.
+      "ctrl-space": ["workspace::SendKeystrokes", "escape d d k shift-a"]
+    }
+  },
+  {
+    "context": "showing_completions",
+    "bindings": {
+      "j": "editor::ContextMenuNext",
+      "k": "editor::ContextMenuPrevious",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      // Move the selection instead of joining.
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      // vim-expand-region
+      "+": "vim::SelectLargerSyntaxNode",
+      "_": "vim::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space f": "file_finder::Toggle"
+    }
+  }
+]
