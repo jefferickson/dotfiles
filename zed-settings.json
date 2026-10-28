@@ -78,13 +78,34 @@
         }
       ],
       "syntax": {
+        "constant.builtin": {
+          "color": "#ffcc66"
+        },
+        "constructor": {
+          "color": "#ffcc66"
+        },
         "function": {
           "color": "#ffef7f"
+        },
+        "function.decorator": {
+          "color": "#ffcc66"
+        },
+        "function.decorator.call": {
+          "color": "#ffcc66"
+        },
+        "function.kwargs": {
+          "color": "#d9d7cd"
         },
         "namespace": {
           "color": "#ffef7f"
         },
+        "type.builtin": {
+          "color": "#ffcc66"
+        },
         "variable": {
+          "color": "#d9d7cd"
+        },
+        "variable.parameter": {
           "color": "#d9d7cd"
         }
       }
@@ -97,6 +118,7 @@
   },
   "buffer_font_size": 13,
   "buffer_font_family": "Input Mono",
+  "buffer_line_height": { "custom": 1.7 },
   "features": {
     "copilot": false
   },
