@@ -70,7 +70,7 @@
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false
+      "enabled": true
     }
   },
   "status_bar": {
@@ -87,28 +87,6 @@
     "TypeScript": {
       "tab_size": 2
     }
-  },
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "javascript": {
-          "suggest": {
-            "enabled": false
-          }
-        },
-        "typescript": {
-          "suggest": {
-            "enabled": false
-          }
-        }
-      }
-    }
-  },
-  "command_aliases": {
-    "GH": "git::OpenFilePermalink",
-    "MarkdownPreview": "markdown::OpenPreview",
-    "MarkdownPreviewToggle": "markdown::OpenPreview",
-    "only": "workspace::CloseInactiveTabsAndPanes"
   },
   "vim": {
     "use_smartcase_find": true
