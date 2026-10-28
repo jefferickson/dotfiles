@@ -128,7 +128,7 @@
       "bool" : false
     },
     "hapticFeedbackOnSnap" : {
-      "int" : 0
+      "int" : 2
     },
     "hideMenubarIcon" : {
       "bool" : true
@@ -143,7 +143,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-
+      "string" : "[8,{\"action\":14},4,{\"compound\":-2},6,{\"action\":13},3,{\"action\":16},1,{\"action\":15},2,{\"action\":2},5,{\"compound\":-3},7,{\"compound\":-4}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -155,13 +155,16 @@
       "double" : 0
     },
     "missionControlDragging" : {
-      "int" : 0
+      "int" : 1
     },
     "missionControlDraggingAllowedOffscreenDistance" : {
       "float" : 25
     },
     "missionControlDraggingDisallowedDuration" : {
       "int" : 250
+    },
+    "mouseButtonShortcutsUseWindowUnderCursor" : {
+      "bool" : false
     },
     "moveCursor" : {
       "int" : 0
@@ -203,7 +206,7 @@
       "float" : 0
     },
     "screenEdgeGapTopNotch" : {
-      "float" : 0
+      "double" : 0
     },
     "screenEdgeGapsOnMainScreenOnly" : {
       "bool" : false
@@ -234,6 +237,9 @@
     },
     "smallerShrinksMaximizedHeight" : {
       "bool" : false
+    },
+    "snapBeforeReachingEdges" : {
+      "double" : 0
     },
     "snapEdgeMarginBottom" : {
       "float" : 5
@@ -367,6 +373,10 @@
       "keyCode" : 117,
       "modifierFlags" : 1572864
     },
+    "larger" : {
+      "keyCode" : 124,
+      "modifierFlags" : 917504
+    },
     "lastFourth" : {
       "keyCode" : 111,
       "modifierFlags" : 1572864
@@ -391,6 +401,22 @@
       "keyCode" : 3,
       "modifierFlags" : 1572864
     },
+    "maximizeHeight" : {
+      "keyCode" : 126,
+      "modifierFlags" : 917504
+    },
+    "nextDisplay" : {
+      "keyCode" : 124,
+      "modifierFlags" : 1835008
+    },
+    "previousDisplay" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1835008
+    },
+    "restore" : {
+      "keyCode" : 51,
+      "modifierFlags" : 786432
+    },
     "rightHalf" : {
       "keyCode" : 124,
       "modifierFlags" : 1572864
@@ -398,6 +424,10 @@
     "secondFourth" : {
       "keyCode" : 109,
       "modifierFlags" : 1572864
+    },
+    "smaller" : {
+      "keyCode" : 123,
+      "modifierFlags" : 917504
     },
     "thirdFourth" : {
       "keyCode" : 103,
@@ -432,5 +462,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "110"
+  "version" : "111"
 }
