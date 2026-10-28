@@ -46,7 +46,7 @@ alias sso="aws sso login"
 alias swe="~/.swedish-word.sh"
 alias te="trans -b en:sv+fi"
 alias tf="trans -b fi:en+sv"
-alias ts="trans -b sv:sv+fi"
+alias ts="trans -b sv:en+fi"
 
 # named dirs
 hash -d git=$GITHOME
