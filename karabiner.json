@@ -9,6 +9,7 @@
                         "enabled": false,
                         "manipulators": [
                             {
+                                "description": "* -> Enter",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -27,6 +28,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Enter -> \\",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -42,6 +44,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Shift+Enter -> |",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -65,6 +68,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: horizontal split in the current directory",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -98,6 +102,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "top-left key -> `",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -113,6 +118,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "top-left key -> ~",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -136,6 +142,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Fix command+top-left",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -159,6 +166,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "< -> left-shift",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "en" }],
@@ -182,6 +190,7 @@
                         "description": "iTerm2 Mods",
                         "manipulators": [
                             {
+                                "description": "Tmux: move to left pane",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -201,6 +210,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: move to down pane",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -220,6 +230,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: swap with the next pane",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -242,10 +253,12 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Neovim or Zed: put this line at the top. Shell: reverse history search.",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.googlecode\\.iterm2$"
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^dev\\.zed\\.Zed$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -260,6 +273,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Interrupt (control+c)",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -281,6 +295,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Neovim: yank into the system clipboard",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -307,6 +322,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Neovim: toggle paste mode, paste, toggle paste mode off",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -337,6 +353,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: go to window 1",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -359,6 +376,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: go to window 2",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -381,6 +399,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: go to window 3",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -403,6 +422,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: new window",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -425,6 +445,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: zoom the pane",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -447,6 +468,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: vertical split in the current directory",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -472,6 +494,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: horizontal split in the current directory",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -497,6 +520,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: break the pane out into its own window",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -522,6 +546,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Tmux: next pane",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [

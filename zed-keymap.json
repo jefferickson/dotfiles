@@ -1,0 +1,72 @@
+[
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+
+      "n": ["workspace::SendKeystrokes", "n z z"],
+      "shift-n": ["workspace::SendKeystrokes", "shift-n z z"],
+
+      "ctrl-j": "vim::LineDown",
+      "ctrl-k": "vim::LineUp",
+
+      "^": "vim::StartOfLine",
+      "g g": ["workspace::SendKeystrokes", "g g 0"],
+      "shift-g": ["workspace::SendKeystrokes", "shift-g 0"],
+
+      "up": "pane::GoBack",
+      "down": "pane::GoForward",
+
+      "pageup": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "pagedown": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "shift-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "shift-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+
+      "ctrl-r": ["workspace::SendKeystrokes", "z t 0"],
+
+      "space f": "file_finder::Toggle",
+
+      "space g h": "editor::OpenPermalinkToLine",
+
+      "space e": "editor::Hover",
+
+      "space r": "vim::Redo"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu && !VimCount",
+    "bindings": {
+      "0": "vim::FirstNonWhitespace"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-j": "vim::LineDown",
+      "ctrl-k": "vim::LineUp",
+
+      "ctrl-space": ["workspace::SendKeystrokes", "escape d d k shift-a"]
+    }
+  },
+  {
+    "context": "showing_completions",
+    "bindings": {
+      "j": "editor::ContextMenuNext",
+      "k": "editor::ContextMenuPrevious",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+
+      "+": "vim::SelectLargerSyntaxNode",
+      "_": "vim::SelectSmallerSyntaxNode"
+    }
+  }
+]
