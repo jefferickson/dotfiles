@@ -21,6 +21,75 @@
   },
   "disable_ai": true,
   "theme": "Ayu Mirage",
+  "theme_overrides": {
+    "Ayu Mirage": {
+      "editor.background": "#262626",
+      "editor.gutter.background": "#1f1f1f",
+      "editor.active_line.background": "#303030",
+      "editor.highlighted_line.background": "#303030",
+      "editor.line_number": "#4d4d4d",
+      "editor.active_line_number": "#ffcc66",
+      "editor.wrap_guide": "#303030",
+      "editor.active_wrap_guide": "#303030",
+      "tab_bar.background": "#444444",
+      "tab.inactive_background": "#444444",
+      "tab.active_background": "#666666",
+      "search.active_match_background": "#ffcc66",
+      "players": [
+        {
+          "cursor": "#72cffeff",
+          "background": "#72cffeff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#5bcde5ff",
+          "background": "#5bcde5ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#fead66ff",
+          "background": "#fead66ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#debffeff",
+          "background": "#debffeff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#95e5cbff",
+          "background": "#95e5cbff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#f18779ff",
+          "background": "#f18779ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#fecf72ff",
+          "background": "#fecf72ff",
+          "selection": "#444444ff"
+        },
+        {
+          "cursor": "#d5fe80ff",
+          "background": "#d5fe80ff",
+          "selection": "#444444ff"
+        }
+      ],
+      "syntax": {
+        "function": {
+          "color": "#ffef7f"
+        },
+        "namespace": {
+          "color": "#ffef7f"
+        },
+        "variable": {
+          "color": "#d9d7cd"
+        }
+      }
+    }
+  },
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
@@ -62,12 +131,16 @@
     "line_numbers": true,
     "folds": true
   },
+  "minimap": {
+    "show": "always"
+  },
   "diagnostics": {
     "inline": {
       "enabled": false
     }
   },
   "git": {
+    "diff_base": "default_branch",
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true
