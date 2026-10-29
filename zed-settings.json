@@ -183,7 +183,7 @@
       "tab_size": 2
     },
     "Python": {
-      "language_servers": ["!basedpyright", "..."]
+      "language_servers": ["ruff", "!basedpyright", "!pyrefly", "!pyright", "!ty", "!pylsp"]
     }
   },
   "vim": {
