@@ -181,6 +181,9 @@
     },
     "TypeScript": {
       "tab_size": 2
+    },
+    "Python": {
+      "language_servers": ["!basedpyright", "..."]
     }
   },
   "vim": {
