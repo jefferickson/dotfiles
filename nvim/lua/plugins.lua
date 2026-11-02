@@ -1,52 +1,41 @@
-require('lazy').setup({
+require('lazy').setup {
 
-    'ibhagwan/fzf-lua',
-    'lewis6991/gitsigns.nvim',
-    'mechatroner/rainbow_csv',
-    'nvim-lualine/lualine.nvim',
-    'ruanyl/vim-gh-line',
-    'Shatur/neovim-ayu',
-    'terryma/vim-expand-region',
-    'tpope/vim-commentary',
-    'tpope/vim-surround',
-    'wellle/context.vim',
+    spec = {
 
-    {
-        'iamcco/markdown-preview.nvim',
-        cmd = {
-            'MarkdownPreviewToggle',
-            'MarkdownPreview',
-            'MarkdownPreviewStop',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/nvim-cmp',
+        'ibhagwan/fzf-lua',
+        'lewis6991/gitsigns.nvim',
+        'mason-org/mason.nvim',
+        'mason-org/mason-lspconfig.nvim',
+        'mechatroner/rainbow_csv',
+        'neovim/nvim-lspconfig',
+        'nvim-lualine/lualine.nvim',
+        'ruanyl/vim-gh-line',
+        'Shatur/neovim-ayu',
+        'terryma/vim-expand-region',
+        'tpope/vim-commentary',
+        'tpope/vim-surround',
+        'wellle/context.vim',
+
+        {
+            'nvim-neo-tree/neo-tree.nvim',
+            branch = 'v3.x',
+            dependencies = {
+                'nvim-lua/plenary.nvim',
+                'MunifTanjim/nui.nvim'
+            }
         },
-        ft = {'markdown'},
-        build = function() vim.fn['mkdp#util#install']() end,
+
+        {
+            'nvim-treesitter/nvim-treesitter',
+            branch = 'main',
+            lazy = false,
+            build = ':TSUpdate',
+        },
+
     },
+    install = { missing = true },
+    checker = { enabled = true },
 
-    {
-        'nvim-neo-tree/neo-tree.nvim',
-        branch = 'v3.x',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'MunifTanjim/nui.nvim'
-        }
-    },
-
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate'
-    },
-
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        dependencies = {
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-            {'neovim/nvim-lspconfig'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/nvim-cmp'},
-            {'L3MON4D3/LuaSnip'}
-        }
-    }
-
-})
+}

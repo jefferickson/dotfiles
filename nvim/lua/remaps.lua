@@ -46,6 +46,14 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 -- easily turn off search highlighting
 vim.keymap.set('n', '<leader><cr>', ':noh<cr>')
 
+-- close every window except the current one
+vim.keymap.set('n', '<leader>o', '<cmd>on<CR>', { silent = true })
+
+-- diagnostics
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>a', '<cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k', { silent = true })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR> <cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k k', { silent = true })
+
 -- toggle paste mode
 vim.keymap.set('', '<leader>pp', ':setlocal paste!<cr>')
 

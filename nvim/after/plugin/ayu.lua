@@ -13,7 +13,8 @@ local diagWarning = '#4D3300'
 local colors = require('ayu.colors')
 colors.generate(true)
 
-require('ayu').setup({
+require('ayu').setup {
+
     mirage = true,
     overrides = {
         ColorColumn = { bg = customColumn },
@@ -32,12 +33,13 @@ require('ayu').setup({
 
         -- Treesitter
         ['@function'] = { fg = customFunction },
-        ['@method'] = { fg = customFunction },
-        ['@namespace'] = { fg = customFunction },
+        ['@function.method'] = { fg = customFunction },
+        ['@module'] = { fg = customFunction },
         ['@variable'] = { fg = customWhite },
         ['@variable.builtin'] = { fg = customFunction },
-    }
-})
+    },
+
+}
 
 require('ayu').colorscheme()
 

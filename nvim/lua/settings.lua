@@ -1,5 +1,6 @@
 -- leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
 
 -- no mouse
 vim.opt.mouse = ''

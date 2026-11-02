@@ -6,6 +6,7 @@ customTheme.normal.a.gui = ''
 customTheme.insert.a.gui = ''
 
 require('lualine').setup {
+
     options = {
         icons_enabled = false,
         theme = customTheme,
@@ -34,5 +35,6 @@ require('lualine').setup {
         lualine_x = {'location'},
         lualine_y = {},
         lualine_z = {}
-    }
+    },
+
 }

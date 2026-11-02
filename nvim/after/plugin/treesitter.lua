@@ -1,13 +1,11 @@
-require('nvim-treesitter.configs').setup({
-    ensure_installed = { 'c', 'lua', 'vim', 'markdown', 'bash', 'css', 'csv',
-        'dockerfile', 'elixir', 'elm', 'go', 'html', 'javascript', 'json',
-        'make', 'python', 'r', 'rust', 'sql', 'terraform', 'typescript', 'yaml',
-    },
+require('nvim-treesitter').install {
+    'c', 'lua', 'vim', 'markdown', 'bash', 'css', 'csv',
+    'dockerfile', 'elixir', 'elm', 'gleam', 'go', 'html', 'javascript', 'json',
+    'make', 'python', 'r', 'rust', 'sql', 'terraform', 'typescript', 'yaml'
+}
 
-    sync_install = false,
-    auto_install = true,
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    }
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function()
+        pcall(vim.treesitter.start)
+    end,
 })

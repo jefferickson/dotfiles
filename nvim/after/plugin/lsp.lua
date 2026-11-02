@@ -1,28 +1,29 @@
-local lsp = require('lsp-zero')
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
-local cmp_format = lsp.cmp_format()
 local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 
-lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
-end)
+vim.lsp.config('*', {
+    capabilities = require('cmp_nvim_lsp').default_capabilities(),
+})
 
 require('mason').setup({})
-require('mason-lspconfig').setup({
+require('mason-lspconfig').setup {
     ensure_installed = { 'lua_ls', 'pyright', 'ts_ls', 'bashls', 'tailwindcss',
         'dockerls', 'elixirls', 'elmls', 'gopls', 'html', 'jsonls', 'marksman',
         'r_language_server', 'rust_analyzer', 'sqls', 'tflint', 'vimls',
         'yamlls',
     },
+}
 
-    handlers = {
-        lsp.default_setup,
-        lua_ls = function()
-            local lua_opts = lsp.nvim_lua_ls()
-            vim.lsp.config('lua_ls', lua_opts)
-        end,
-    }
+vim.lsp.config('lua_ls', {
+    settings = {
+        Lua = {
+            runtime = { version = 'LuaJIT' },
+            workspace = {
+                checkThirdParty = false,
+                library = { vim.env.VIMRUNTIME },
+            },
+        },
+    },
 })
 
 vim.lsp.config('ts_ls', {
@@ -33,24 +34,59 @@ vim.lsp.config('ts_ls', {
     },
 })
 
+-- Ships with the gleam compiler (`gleam lsp`). Mason no longer packages it.
+vim.lsp.enable('gleam')
+
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(event)
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buf, desc = 'Go to definition' })
+    end,
+})
+
 cmp.setup({
-    formatting = cmp_format,
+    formatting = {
+        fields = { 'abbr', 'menu', 'kind' },
+        format = function(entry, item)
+            local source = entry.source.name
+            item.menu = source == 'nvim_lsp' and '[LSP]' or string.format('[%s]', source)
+            return item
+        end,
+    },
+    snippet = {
+        expand = function(args)
+            vim.snippet.expand(args.body)
+        end,
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+    },
     preselect = 'item',
+    window = {
+        completion = cmp.config.window.bordered({ border = 'rounded' }),
+        documentation = cmp.config.window.bordered({ border = 'rounded' }),
+    },
     completion = {
         autocomplete = false,
-        completeopt = 'menu,menuone,noinsert'
+        completeopt = 'menu,menuone,noinsert',
     },
     mapping = cmp.mapping.preset.insert({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<TAB>'] = cmp_action.luasnip_supertab(),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            local col = vim.fn.col('.') - 1
+
+            if cmp.visible() then
+                cmp.select_next_item(cmp_select_opts)
+            elseif vim.snippet.active({ direction = 1 }) then
+                vim.snippet.jump(1)
+            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+                fallback()
+            else
+                cmp.complete()
+            end
+        end, { 'i', 's' }),
         ['j'] = cmp.mapping.select_next_item(cmp_select_opts),
         ['k'] = cmp.mapping.select_prev_item(cmp_select_opts),
     }),
 })
 
 vim.diagnostic.config({ virtual_text = false })
-
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>a', '<cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k', { silent = true })
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR> <cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k k', { silent = true })
-vim.keymap.set('n', '<leader>o', '<cmd>on<CR>', { silent = true })
