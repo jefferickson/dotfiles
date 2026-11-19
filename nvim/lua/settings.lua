@@ -63,10 +63,10 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     group = 'settings',
     pattern = '*',
     callback = function()
-        if vim.fn.line("'\"") > 1 and vim.fn.line("'\"") <= vim.fn.line('$') then
-            vim.fn.setpos('.', vim.fn.getpos("'\""))
+        if vim.fn.line('\'"') > 1 and vim.fn.line('\'"') <= vim.fn.line('$') then
+            vim.fn.setpos('.', vim.fn.getpos('\'"'))
         end
-    end
+    end,
 })
 
 -- delete trailing whitespace on save
@@ -81,7 +81,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         local view = vim.fn.winsaveview()
         vim.cmd([[silent! keeppatterns %s/\s\+$//e]])
         vim.fn.winrestview(view)
-    end
+    end,
 })
 
 -- delete empty lines at end of file on save
@@ -92,7 +92,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         local view = vim.fn.winsaveview()
         vim.cmd([[silent! keeppatterns %s/\($\n\s*\)\+\%$//]])
         vim.fn.winrestview(view)
-    end
+    end,
 })
 
 -- two-space indent for JS and TS, including JSX and TSX
@@ -103,7 +103,7 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.tabstop = 2
         vim.opt_local.softtabstop = 2
         vim.opt_local.shiftwidth = 2
-    end
+    end,
 })
 
 -- Go uses tabs. The runtime ftplugin does not set this.
@@ -115,5 +115,5 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.tabstop = 4
         vim.opt_local.softtabstop = 4
         vim.opt_local.shiftwidth = 4
-    end
+    end,
 })

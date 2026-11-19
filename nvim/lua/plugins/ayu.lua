@@ -16,7 +16,7 @@ return {
         local colors = require('ayu.colors')
         colors.generate(true)
 
-        require('ayu').setup {
+        require('ayu').setup({
 
             mirage = true,
             overrides = {
@@ -41,8 +41,7 @@ return {
                 ['@variable'] = { fg = customWhite },
                 ['@variable.builtin'] = { fg = customFunction },
             },
-
-        }
+        })
 
         require('ayu').colorscheme()
 

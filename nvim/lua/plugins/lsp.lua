@@ -15,14 +15,31 @@ return {
         })
 
         require('mason').setup({})
-        require('mason-lspconfig').setup {
+        require('mason-lspconfig').setup({
             ensure_installed = {
-                'autotools_ls', 'bashls', 'clangd', 'cssls', 'dockerls', 'elixirls',
-                'elmls', 'gopls', 'html', 'jsonls', 'lua_ls', 'marksman', 'pyright',
-                'r_language_server', 'rust_analyzer', 'sqls', 'tailwindcss', 'tflint',
-                'ts_ls', 'vimls', 'yamlls',
+                'autotools_ls',
+                'bashls',
+                'clangd',
+                'cssls',
+                'dockerls',
+                'elixirls',
+                'elmls',
+                'gopls',
+                'html',
+                'jsonls',
+                'lua_ls',
+                'marksman',
+                'pyright',
+                'r_language_server',
+                'rust_analyzer',
+                'sqls',
+                'tailwindcss',
+                'tflint',
+                'ts_ls',
+                'vimls',
+                'yamlls',
             },
-        }
+        })
 
         vim.lsp.config('lua_ls', {
             settings = {

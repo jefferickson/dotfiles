@@ -8,7 +8,7 @@ return {
         customTheme.normal.a.gui = ''
         customTheme.insert.a.gui = ''
 
-        require('lualine').setup {
+        require('lualine').setup({
 
             options = {
                 icons_enabled = false,
@@ -21,25 +21,24 @@ return {
                     statusline = 1000,
                     tabline = 1000,
                     winbar = 1000,
-                }
+                },
             },
             sections = {
-                lualine_a = {'mode'},
-                lualine_b = {'branch', 'diff', 'diagnostics'},
-                lualine_c = {'filename'},
-                lualine_x = {'fileformat', 'encoding', 'filetype'},
-                lualine_y = {'progress'},
-                lualine_z = {'location'}
+                lualine_a = { 'mode' },
+                lualine_b = { 'branch', 'diff', 'diagnostics' },
+                lualine_c = { 'filename' },
+                lualine_x = { 'fileformat', 'encoding', 'filetype' },
+                lualine_y = { 'progress' },
+                lualine_z = { 'location' },
             },
             inactive_sections = {
                 lualine_a = {},
                 lualine_b = {},
-                lualine_c = {'filename'},
-                lualine_x = {'location'},
+                lualine_c = { 'filename' },
+                lualine_x = { 'location' },
                 lualine_y = {},
-                lualine_z = {}
+                lualine_z = {},
             },
-
-        }
+        })
     end,
 }
