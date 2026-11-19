@@ -154,6 +154,10 @@
   "tab_bar": {
     "show": true
   },
+  "tabs": {
+    "file_icons": true,
+    "show_diagnostics": "all"
+  },
   "pane_split_direction_vertical": "right",
   "pane_split_direction_horizontal": "down",
   "remove_trailing_whitespace_on_save": true,
