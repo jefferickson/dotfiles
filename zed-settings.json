@@ -1,13 +1,20 @@
 {
+  "terminal": {
+    "button": false
+  },
   "agent_servers": {
     "pi-acp": {
       "type": "registry"
     },
     "cursor": {
+      "default_config_options": {
+        "model": "auto-smart"
+      },
       "type": "registry"
     }
   },
   "edit_predictions": {
+    "button": false,
     "allow_data_collection": "no"
   },
   "session": {
@@ -24,9 +31,13 @@
     "dock": "left"
   },
   "collaboration_panel": {
+    "button": false,
     "dock": "left"
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "single_file_review": true,
     "enable_feedback": false,
     "dock": "right",
@@ -34,6 +45,7 @@
     "model_parameters": []
   },
   "git_panel": {
+    "button": false,
     "dock": "left"
   },
   "disable_ai": false,
