@@ -61,6 +61,24 @@
     }
   },
   {
+    "context": "vim_mode == insert && !showing_completions && !in_leading_whitespace && !(in_snippet && has_next_tabstop)",
+    "bindings": {
+      "tab": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "vim_mode == insert && in_leading_whitespace && !showing_completions && !(in_snippet && has_next_tabstop)",
+    "bindings": {
+      "tab": "editor::Indent"
+    }
+  },
+  {
+    "context": "vim_mode == insert && in_snippet && has_next_tabstop && !showing_completions",
+    "bindings": {
+      "tab": "editor::NextSnippetTabstop"
+    }
+  },
+  {
     "context": "vim_mode == visual",
     "bindings": {
       "shift-j": "editor::MoveLineDown",
