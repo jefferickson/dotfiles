@@ -16,10 +16,11 @@ return {
 
         require('mason').setup({})
         require('mason-lspconfig').setup {
-            ensure_installed = { 'lua_ls', 'pyright', 'ts_ls', 'bashls', 'tailwindcss',
-                'dockerls', 'elixirls', 'elmls', 'gopls', 'html', 'jsonls', 'marksman',
-                'r_language_server', 'rust_analyzer', 'sqls', 'tflint', 'vimls',
-                'yamlls',
+            ensure_installed = {
+                'autotools_ls', 'bashls', 'clangd', 'cssls', 'dockerls', 'elixirls',
+                'elmls', 'gopls', 'html', 'jsonls', 'lua_ls', 'marksman', 'pyright',
+                'r_language_server', 'rust_analyzer', 'sqls', 'tailwindcss', 'tflint',
+                'ts_ls', 'vimls', 'yamlls',
             },
         }
 
