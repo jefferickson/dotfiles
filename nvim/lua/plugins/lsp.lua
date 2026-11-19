@@ -47,7 +47,9 @@ return {
         -- Ships with the gleam compiler (`gleam lsp`). Mason no longer packages it.
         vim.lsp.enable('gleam')
 
+        vim.api.nvim_create_augroup('lsp', { clear = true })
         vim.api.nvim_create_autocmd('LspAttach', {
+            group = 'lsp',
             callback = function(event)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buf, desc = 'Go to definition' })
             end,

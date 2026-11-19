@@ -11,7 +11,9 @@ return {
             'surface', 'terraform', 'tsx', 'typescript', 'vim', 'yaml',
         }
 
+        vim.api.nvim_create_augroup('treesitter', { clear = true })
         vim.api.nvim_create_autocmd('FileType', {
+            group = 'treesitter',
             callback = function()
                 pcall(vim.treesitter.start)
             end,

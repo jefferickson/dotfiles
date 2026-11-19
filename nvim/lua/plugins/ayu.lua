@@ -64,7 +64,9 @@ return {
             vim.api.nvim_win_set_hl_ns(win, has_diagnostics and diag_ns or -1)
         end
 
+        vim.api.nvim_create_augroup('ayu', { clear = true })
         vim.api.nvim_create_autocmd('DiagnosticChanged', {
+            group = 'ayu',
             callback = function(args)
                 for _, win in ipairs(vim.api.nvim_list_wins()) do
                     if vim.api.nvim_win_get_buf(win) == args.buf then
@@ -75,6 +77,7 @@ return {
         })
 
         vim.api.nvim_create_autocmd('BufWinEnter', {
+            group = 'ayu',
             callback = function()
                 sync_diag_fold(vim.api.nvim_get_current_win())
             end,
