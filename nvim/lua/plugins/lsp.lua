@@ -81,6 +81,9 @@ return {
         local function project_ruff_bin()
             local name = vim.api.nvim_buf_get_name(0)
             local dir = name ~= '' and vim.fs.dirname(name) or vim.uv.cwd()
+            if not dir then
+                return
+            end
             local git_root = vim.fs.root(dir, '.git')
 
             while dir do
