@@ -33,7 +33,6 @@ return {
                 'marksman',
                 'pyright',
                 'ruff',
-                'r_language_server',
                 'rust_analyzer',
                 'sqls',
                 'tailwindcss',
