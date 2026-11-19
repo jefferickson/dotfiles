@@ -30,6 +30,7 @@
       "space g h": "editor::OpenPermalinkToLine",
 
       "space e": "editor::Hover",
+      "space d": "editor::ToggleInlineDiagnostics",
 
       "space r": "vim::Redo"
     }

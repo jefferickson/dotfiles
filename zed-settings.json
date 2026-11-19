@@ -1,4 +1,12 @@
 {
+  "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    },
+    "cursor": {
+      "type": "registry"
+    }
+  },
   "edit_predictions": {
     "allow_data_collection": "no"
   },
@@ -167,8 +175,13 @@
   },
   "diagnostics": {
     "inline": {
-      "enabled": false
+      "enabled": false,
+      "padding": 4,
+      "max_severity": null
     }
+  },
+  "scrollbar": {
+    "diagnostics": "all"
   },
   "git": {
     "diff_base": "default_branch",
