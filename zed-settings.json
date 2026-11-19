@@ -183,7 +183,7 @@
       "tab_size": 2
     },
     "Python": {
-      "language_servers": ["ruff", "!basedpyright", "!pyrefly", "!pyright", "!ty", "!pylsp"],
+      "language_servers": ["basedpyright", "ruff", "!pyright", "!pyrefly", "!ty", "!pylsp"],
       "format_on_save": "on",
       "formatter": {
         "language_server": { "name": "ruff" }
@@ -214,5 +214,18 @@
   },
   "vim": {
     "use_smartcase_find": true
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "disableOrganizeImports": true,
+          "analysis": {
+            "diagnosticMode": "openFilesOnly",
+            "typeCheckingMode": "off"
+          }
+        }
+      }
+    }
   }
 }
