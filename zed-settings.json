@@ -1,6 +1,14 @@
 {
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
+  "session": {
+    "restore_unsaved_buffers": false
+  },
+  "on_new_window": "empty_tab",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
+    "git_status_indicator": true,
     "dock": "left",
     "hide_hidden": false
   },
@@ -11,6 +19,7 @@
     "dock": "left"
   },
   "agent": {
+    "single_file_review": true,
     "enable_feedback": false,
     "dock": "right",
     "favorite_models": [],
@@ -19,7 +28,7 @@
   "git_panel": {
     "dock": "left"
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "theme": "Ayu Mirage",
   "theme_overrides": {
     "Ayu Mirage": {
