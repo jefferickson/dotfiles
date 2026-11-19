@@ -183,7 +183,33 @@
       "tab_size": 2
     },
     "Python": {
-      "language_servers": ["ruff", "!basedpyright", "!pyrefly", "!pyright", "!ty", "!pylsp"]
+      "language_servers": ["ruff", "!basedpyright", "!pyrefly", "!pyright", "!ty", "!pylsp"],
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": { "name": "ruff" }
+      },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true
+      }
+    },
+    "Elixir": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
+    },
+    "Gleam": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "gleam",
+          "arguments": ["format", "--stdin"]
+        }
+      }
     }
   },
   "vim": {
