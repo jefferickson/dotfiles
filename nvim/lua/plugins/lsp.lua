@@ -10,10 +10,12 @@ return {
         local cmp = require('cmp')
         local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 
+        -- Base capabilities
         vim.lsp.config('*', {
             capabilities = require('cmp_nvim_lsp').default_capabilities(),
         })
 
+        -- Package manager for language servers
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = {
@@ -42,6 +44,7 @@ return {
             },
         })
 
+        -- Server configurations
         vim.lsp.config('lua_ls', {
             settings = {
                 Lua = {
@@ -62,7 +65,10 @@ return {
             },
         })
 
-        -- Ruff sorts imports on save. Keep Pyright from doing it too.
+        -- Ships with the gleam compiler (`gleam lsp`). Mason no longer packages it.
+        vim.lsp.enable('gleam')
+
+        -- Python: pyright for navigation & types, ruff for linting, fixes, & formatting
         vim.lsp.config('pyright', {
             settings = {
                 pyright = {
@@ -71,7 +77,7 @@ return {
             },
         })
 
-        -- Use ruff version pinned in the project venv.
+        -- Use ruff version pinned in the project venv when available.
         local function project_ruff_bin()
             local name = vim.api.nvim_buf_get_name(0)
             local dir = name ~= '' and vim.fs.dirname(name) or vim.uv.cwd()
@@ -106,9 +112,22 @@ return {
             },
         })
 
-        -- Ships with the gleam compiler (`gleam lsp`). Mason no longer packages it.
-        vim.lsp.enable('gleam')
+        -- Autocommands
+        vim.api.nvim_create_augroup('lsp', { clear = true })
+        vim.api.nvim_create_autocmd('LspAttach', {
+            group = 'lsp',
+            callback = function(event)
+                local client = vim.lsp.get_client_by_id(event.data.client_id)
+                if client and client.name == 'ruff' then
+                    -- Pyright owns hover.
+                    client.server_capabilities.hoverProvider = false
+                end
 
+                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buf, desc = 'Go to definition' })
+            end,
+        })
+
+        -- Python on-save: organize imports, autofix, then format with Ruff
         local function apply_ruff_source_action(client, bufnr, kind)
             local last_line = math.max(vim.api.nvim_buf_line_count(bufnr) - 1, 0)
             local last_text = vim.api.nvim_buf_get_lines(bufnr, last_line, last_line + 1, true)[1] or ''
@@ -146,20 +165,6 @@ return {
             end
         end
 
-        vim.api.nvim_create_augroup('lsp', { clear = true })
-        vim.api.nvim_create_autocmd('LspAttach', {
-            group = 'lsp',
-            callback = function(event)
-                local client = vim.lsp.get_client_by_id(event.data.client_id)
-                if client and client.name == 'ruff' then
-                    -- Pyright owns hover.
-                    client.server_capabilities.hoverProvider = false
-                end
-
-                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = event.buf, desc = 'Go to definition' })
-            end,
-        })
-
         vim.api.nvim_create_autocmd('BufWritePre', {
             group = 'lsp',
             callback = function(args)
@@ -190,6 +195,7 @@ return {
             end,
         })
 
+        -- Autocompletion (nvim-cmp)
         cmp.setup({
             formatting = {
                 fields = { 'abbr', 'menu', 'kind' },
@@ -236,6 +242,7 @@ return {
             }),
         })
 
+        -- Diagnostics UI
         vim.diagnostic.config({ virtual_text = false })
     end,
 }
