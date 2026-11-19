@@ -1,5 +1,8 @@
 return {
     'Shatur/neovim-ayu',
+    -- Load before UI plugins. lazy.nvim does not keep a stable order when
+    -- priorities are equal, and ayu's colorscheme clears existing highlights.
+    priority = 1000,
     config = function()
         local accent = '#FFCC66'
         local customBg = '#262626'
@@ -43,11 +46,8 @@ return {
             },
         })
 
-        require('ayu').colorscheme()
+        vim.cmd.colorscheme('ayu')
 
-        -- Override FoldColumn only in windows whose buffer has diagnostics.
-        -- Namespace -1 clears the window override so other windows keep the
-        -- colorscheme color. 0 is the global namespace, not "unset".
         local diag_ns = vim.api.nvim_create_namespace('diagfold')
         vim.api.nvim_set_hl(diag_ns, 'FoldColumn', { bg = diagWarning })
 
