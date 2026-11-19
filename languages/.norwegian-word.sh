@@ -7,6 +7,9 @@ echo "Søk: $1"
 
 echo -n $1 | pbcopy
 
+# replace Norwegian vowels
+cleaned_word=`echo $1 | sed -e 's/[åÅ]/\%C3\%A5/g' -e 's/[øØ]/\%C3\%B8/g' -e 's/[æÆ]/\%C3\%A6/g'`
+
 /Applications/Firefox.app/Contents/MacOS/firefox \
     --new-tab "https://forvo.com/word/$1/#no" \
     --new-tab "http://en.bab.la/dictionary/norwegian-english/$1" \
@@ -17,7 +20,7 @@ echo -n $1 | pbcopy
     2>/dev/null
 
 trash ~/Downloads/pronunciation_no_*.mp3
-curl -s https://apifree.forvo.com/action/word-pronunciations/format/json/word/$1/id_lang_speak/120/key/$FORVO_API_KEY |
+curl -s "https://apifree.forvo.com/key/${FORVO_API_KEY}/format/json/action/word-pronunciations/word/${cleaned_word}/language/no" |
     jq '[.items[] | select(.code == "no")] | max_by(.hits) | .pathmp3' |
     xargs -L 1 curl -s --output ~/Downloads/pronunciation_no_$1.mp3
 
