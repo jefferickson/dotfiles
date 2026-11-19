@@ -12,10 +12,12 @@ vim.opt.termguicolors = true
 vim.opt.guicursor = ''
 
 -- tabs and indents
--- for tab size, see autocmd at bottom of file
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 
 -- undo
 vim.opt.swapfile = false
@@ -38,9 +40,6 @@ vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.stal = 2
 
--- performance
-vim.opt.lazyredraw = true
-
 -- visual cues
 vim.opt.showmatch = true
 vim.opt.mat = 2
@@ -48,11 +47,7 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
 -- color columns
-local colorcolumns = '79'
-for i = 119, 250 do
-    colorcolumns = colorcolumns .. ',' .. tostring(i)
-end
-vim.opt.colorcolumn = colorcolumns
+vim.opt.colorcolumn = '79,119'
 
 -- splits
 vim.opt.splitright = true
@@ -75,15 +70,17 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 })
 
 -- delete trailing whitespace on save
+-- markdown uses two trailing spaces as a hard line break
 vim.api.nvim_create_autocmd('BufWritePre', {
     group = 'settings',
     pattern = '*',
-    callback = function()
-        local saveCursor = vim.fn.getpos('.')
-        local oldQuery = vim.fn.getreg('/')
-        vim.cmd([[ silent! %s/\s\+$//e ]])
-        vim.fn.setpos('.', saveCursor)
-        vim.fn.setreg('/', oldQuery)
+    callback = function(args)
+        if vim.bo[args.buf].filetype == 'markdown' then
+            return
+        end
+        local view = vim.fn.winsaveview()
+        vim.cmd([[silent! keeppatterns %s/\s\+$//e]])
+        vim.fn.winrestview(view)
     end
 })
 
@@ -92,27 +89,31 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     group = 'settings',
     pattern = '*',
     callback = function()
-        local saveCursor = vim.fn.getpos('.')
-        vim.cmd([[ silent! %s/\($\n\s*\)\+\%$// ]])
-        vim.fn.setpos('.', saveCursor)
+        local view = vim.fn.winsaveview()
+        vim.cmd([[silent! keeppatterns %s/\($\n\s*\)\+\%$//]])
+        vim.fn.winrestview(view)
     end
 })
 
--- use different tab size for JS, Typescript
+-- two-space indent for JS and TS, including JSX and TSX
 vim.api.nvim_create_autocmd('FileType', {
     group = 'settings',
-    pattern = '*',
+    pattern = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
     callback = function()
-        if vim.bo.filetype == "javascript" or
-            vim.bo.filetype == "typescript"
-        then
-            vim.opt.tabstop = 2
-            vim.opt.softtabstop = 2
-            vim.opt.shiftwidth = 2
-        else
-            vim.opt.tabstop = 4
-            vim.opt.softtabstop = 4
-            vim.opt.shiftwidth = 4
-        end
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+        vim.opt_local.shiftwidth = 2
+    end
+})
+
+-- Go uses tabs. The runtime ftplugin does not set this.
+vim.api.nvim_create_autocmd('FileType', {
+    group = 'settings',
+    pattern = 'go',
+    callback = function()
+        vim.opt_local.expandtab = false
+        vim.opt_local.tabstop = 4
+        vim.opt_local.softtabstop = 4
+        vim.opt_local.shiftwidth = 4
     end
 })

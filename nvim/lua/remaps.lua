@@ -50,9 +50,28 @@ vim.keymap.set('n', '<leader><cr>', ':noh<cr>')
 vim.keymap.set('n', '<leader>o', '<cmd>on<CR>', { silent = true })
 
 -- diagnostics
+-- setqflist() opens the quickfix and moves into it. Return to the previous
+-- window when that happens, without moving the cursor.
+local function show_diagnostics_qf()
+    vim.diagnostic.setqflist()
+    if vim.bo.buftype == 'quickfix' then
+        vim.cmd.wincmd('p')
+    end
+end
+
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>a', '<cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k', { silent = true })
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR> <cmd>lua vim.diagnostic.setqflist()<CR> <C-w>k k', { silent = true })
+vim.keymap.set('n', '<leader>a', show_diagnostics_qf, { silent = true })
+vim.keymap.set('n', '<leader>w', function()
+    vim.cmd.write()
+    show_diagnostics_qf()
+end, { silent = true })
+
+-- expand and shrink the treesitter node, or the LSP selection range when
+-- there is no parser. normal-mode `-` stays the built-in line motion.
+vim.keymap.set('n', '+', 'van', { remap = true, desc = 'Expand selection' })
+vim.keymap.set('x', '+', 'an', { remap = true, desc = 'Expand selection' })
+vim.keymap.set('x', '-', 'in', { remap = true, desc = 'Shrink selection' })
+vim.keymap.set('x', '_', 'in', { remap = true, desc = 'Shrink selection' })
 
 -- toggle paste mode
 vim.keymap.set('', '<leader>pp', ':setlocal paste!<cr>')
