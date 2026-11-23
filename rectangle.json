@@ -139,11 +139,17 @@
     "ignoreDragSnapToo" : {
       "int" : 0
     },
+    "ignoreMenuBar" : {
+      "int" : 0
+    },
+    "ignoreShortcutsInMissionControl" : {
+      "bool" : true
+    },
     "ignoredSnapAreas" : {
       "int" : 0
     },
     "landscapeSnapAreas" : {
-      "string" : "[8,{\"action\":14},4,{\"compound\":-2},6,{\"action\":13},3,{\"action\":16},1,{\"action\":15},2,{\"action\":2},5,{\"compound\":-3},7,{\"compound\":-4}]"
+      "string" : "[2,{\"action\":2},5,{\"compound\":-3},7,{\"compound\":-4},8,{\"action\":14},4,{\"compound\":-2},6,{\"action\":13},3,{\"action\":16},1,{\"action\":15}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -174,6 +180,9 @@
     },
     "moveFixedSizeToEdge" : {
       "int" : 1
+    },
+    "newWindowAction" : {
+
     },
     "notifiedOfProblemApps" : {
       "bool" : false
@@ -280,6 +289,9 @@
     "systemWideMouseDownApps" : {
 
     },
+    "thirdsAndFourthsAcrossDisplays" : {
+      "int" : 0
+    },
     "tileColumnsMaxWindows" : {
       "int" : 3
     },
@@ -309,6 +321,9 @@
     },
     "unsnapRestore" : {
       "int" : 2
+    },
+    "verticalSixthsCycleTwelfths" : {
+      "int" : 0
     },
     "verticalSplitRatio" : {
       "float" : 50
@@ -462,5 +477,5 @@
       "modifierFlags" : 1310720
     }
   },
-  "version" : "111"
+  "version" : "112"
 }
