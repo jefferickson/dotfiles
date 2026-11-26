@@ -44,7 +44,119 @@
     "enable_feedback": false,
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
+    "tool_permissions": {
+      "default": "confirm",
+      "tools": {
+        "terminal": {
+          "default": "confirm",
+          "always_allow": [
+            // read-only shell utilities
+            { "pattern": "^\\s*(?:ls|pwd|cat|head|tail|wc|file|stat|tree|rg|grep|which|type|diff|echo|printf|date|uname|jq)\\b" },
+            // read-only git lookups (write variants of branch/tag/remote/etc. are caught by always_deny)
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+(?:status|log|diff|show|blame|rev-parse|ls-files|ls-tree|cat-file|describe|shortlog|show-ref|for-each-ref|rev-list|name-rev|check-ignore|grep|reflog|fetch|branch|tag|remote|stash\\s+(?:list|show)|config\\s+--get|worktree\\s+list|submodule\\s+status|version|help)\\b" },
+            // online lookups are fine
+            { "pattern": "^\\s*(?:curl|wget)\\b" }
+          ],
+          "always_deny": [
+            // git: commands that rewrite history, move refs, or discard work
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+(?:commit|push|pull|rebase|reset|merge|cherry-pick|revert|am|filter-branch|filter-repo|replace|notes|update-ref|gc|prune|repack|clean|restore)\\b" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+reflog\\s+(?:expire|delete)\\b" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+remote\\s+(?:add|remove|rm|rename|set-url|set-head|set-branch|prune|update)\\b" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+branch\\s+(?:-[dDmMcCfu]\\w*|--(?:delete|move|copy|force|set-upstream-to|unset-upstream|edit-description)\\b|[^-\\s;&|])" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+tag\\s+(?:-[adsfu]\\w*|--(?:annotate|sign|delete|force|create-reflog|cleanup)\\b|[^-\\s;&|])" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+stash(?:\\s+(?:push|pop|apply|drop|clear|save|branch|store|create)\\b|\\s+-|\\s*(?:$|[;&|]))" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+checkout\\s+(?:-[bBf]\\b|--force\\b|--orphan\\b|--(?:\\s|$)|\\.(?:\\s|$|[;&|]))" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+switch\\s+(?:-[cC]\\b|--create\\b|--force-create\\b|--orphan\\b)" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+config\\s+(?:--(?:add|unset|unset-all|replace-all|remove-section|rename-section)\\b|--(?:global|local|system|file)\\b.*\\s[\\w.-]+\\.[\\w.-]+\\s+\\S|[\\w.-]+\\.[\\w.-]+\\s+[^-\\s;&|])" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+(?:worktree|submodule)\\s+(?:add|remove|prune|move|lock|unlock|update|deinit)\\b" },
+            { "pattern": "\\bgit(?:\\s+(?:-C\\s+\\S+|-c\\s+\\S+|--git-dir(?:=|\\s+)\\S+|--work-tree(?:=|\\s+)\\S+|--no-pager|--paginate|--no-optional-locks))*\\s+bisect\\s+(?:start|good|bad|new|old|skip|reset|run)\\b" },
+            // never use the GitHub CLI (gh), in any form
+            { "pattern": "(?:^|[;&|(]|/|\\b(?:command|exec|env)\\s+)\\s*gh(?:\\s|$)" },
+            // shell: file ops, cd, and download targets outside the project
+            { "pattern": "\\b(?:rm|mv|cp|ln|touch|mkdir|rmdir|chmod|chown|chgrp|tee|truncate|install|dd|unlink|rsync|scp)\\b[^;&|]*\\s[\"']?(?:/|~|\\$HOME|\\$\\{HOME\\}|\\.\\.(?:/|\\s|$))" },
+            { "pattern": "\\b(?:cd|pushd)(?:\\s+[\"']?(?:/|~|\\$HOME|\\$\\{HOME\\}|\\.\\.(?:/|\\s|$))|\\s*(?:$|[;&|]))" },
+            { "pattern": "\\s(?:-[oO]\\s*|--output(?:-dir)?(?:=|\\s+)|--directory-prefix(?:=|\\s+))[\"']?(?:/|~|\\$HOME|\\$\\{HOME\\}|\\.\\.(?:/|\\s|$))" },
+            { "pattern": "\\b(?:sudo|doas)\\b" },
+            // shell: writes into .git internals
+            { "pattern": "(?:>>?|\\b(?:rm|mv|cp|tee|truncate|chmod|unlink)\\b)[^;&|]*\\.git(?:/|\\s|$)" }
+          ],
+          // redirects to paths outside the project prompt instead of being blocked
+          // (this also prompts for 2>/dev/null, since regex can't exempt /dev/null)
+          "always_confirm": [
+            { "pattern": ">>?\\s*[\"']?(?:/|~|\\$HOME|\\$\\{HOME\\}|\\.\\.(?:/|\\s|$))" }
+          ]
+        },
+        // file tools: writes allowed inside the project; absolute, home, env-var, and parent-dir paths and .git internals are blocked
+        "edit_file": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        "write_file": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        "create_directory": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        "delete_path": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        "move_path": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        "copy_path": {
+          "default": "allow",
+          "always_deny": [
+            { "pattern": "^/" },
+            { "pattern": "^~" },
+            { "pattern": "^\\$" },
+            { "pattern": "(?:^|/)\\.\\.(?:/|$)" },
+            { "pattern": "(?:^|/)\\.git(?:/|$)" }
+          ]
+        },
+        // online lookups are allowed
+        "fetch": {
+          "default": "allow"
+        },
+        "search_web": {
+          "default": "allow"
+        }
+      }
+    }
   },
   "git_panel": {
     "button": false,
